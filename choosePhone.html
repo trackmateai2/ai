@@ -1,0 +1,89 @@
+<html>
+<head>
+<Link href="choosePhone.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+<h1>Error!</h1>
+<h2><u>Duplicate IMEi</u></h2>
+
+<p>Alert: Parallel identical IMEI numbers detected in the system. Due to duplication, only one device's location information can be displayed at a time. Please select one device to view location data. </p>
+
+
+<button class="buttonHome" onclick="myFunction()">
+  <span class="buttonHome-content">Choose Device</span>
+</button>
+
+
+
+<p id="demo"></p>
+
+
+
+<script>
+function myFunction() {
+  let text;
+  let favDrink = prompt(" Select Phone", "Phone1");
+  switch(favDrink) {
+    case "Phone1":
+      text = "You have chosen Phone1. Information will reflect on your account within an hr";
+      
+      
+      
+      
+        const secretKey = '$2b$10$5.GD5IWqNSL2RsbiNWZdbeQGJ3wkUk/t3ZxfbbLn2ddvAPibpWpr.';
+        const binName= 'myBin';
+
+
+
+      
+        const data = {
+        IMEi: text
+      };
+
+      
+       fetch('https://api.jsonbin.io/v3/b', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              "X-Master-Key": secretKey,
+              "X-Bin-Private": true,
+              'X-Bin-Name': "phone"
+            },
+            body: JSON.stringify(data)
+          })
+         .then(response => response.json())
+         .then(jsonData => console.log(jsonData))
+         .catch(error => console.error(error));
+      
+
+
+
+      
+      
+      
+      
+      
+      
+    break;
+    case "Phone2":
+      text = "You have chosen Phone2. Information will reflect on your account within an hr";
+    break;
+    default:
+      text = "Please select a valid option";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

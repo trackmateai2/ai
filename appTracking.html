@@ -1,0 +1,131 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='appTracking.js'>  </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="appTracking.css"></head>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<body>
+
+
+
+    <div class="topDiv"> 
+       <svg width="40" height="40" fill="none" onclick="openNav()" stroke="#c0c0c0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M3 12h18"></path>
+             <path d="M3 6h18"></path>
+             <path d="M3 18h18"></path>
+       </svg>
+       <p class="aiPow"> Tracking </p>    
+    </div> <!---_Nav_---> 
+
+      <!--
+         - Input Imei
+         - Last knwn location
+         - Proof of Id may be needed for security reasons 
+         - Input promo code [in u have]
+         - Add notification to nav
+      -->
+
+          <div class="container">
+	          <div class="loader"></div>
+	          <div class="loader"></div>
+	          <div class="loader"></div>
+          </div>
+
+     
+    
+<form class="form" id="myForm">
+    
+    <span class="signup">Fill In The Form</span>
+    
+    
+    <label for="usernameField" class="usernamelabel label">Serial Number</label>
+    <input type="text" class="usernameField" placeholder="Serial Number" id="imeiField" required="required">
+    
+    
+    <label for="usernameField" class="usernamelabel label">Last Known Location</label>
+    <input type="text" class="usernameField" placeholder="Last location" id="locationField" required="required">
+    
+    
+    <label for="usernameField" class="usernamelabel label">Email</label>
+    <input type="text" class="usernameField"placeholder="Email" id="emailField">
+    
+    
+    
+    
+    <div class="form--marketing">
+        <input id="okayToEmail" type="checkbox">
+        <label for="okayToEmail" class="checkbox">
+          I have accepted the Terms and Conditions
+        </label>
+    </div>
+<button class="form--submit" onClick="startTrk()"> Start Tracking </button>
+</form>
+
+
+<script type='text/javascript'>
+    
+
+
+
+    function startTrk(){
+        
+        var subject = document.getElementById("imeiField").value;
+        var body = document.getElementById("locationField").value;
+        var email = document.getElementById("emailField").value;
+        
+        
+        const secretKey = '$2b$10$5.GD5IWqNSL2RsbiNWZdbeQGJ3wkUk/t3ZxfbbLn2ddvAPibpWpr.';
+        const binName= 'myBin';
+
+
+
+      
+        const data = {
+        IMEi: subject,
+        LastLocation: body,
+        MailTo: email
+      };
+
+      
+       fetch('https://api.jsonbin.io/v3/b', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              "X-Master-Key": secretKey,
+              "X-Bin-Private": true,
+              'X-Bin-Name': email
+            },
+            body: JSON.stringify(data)
+          })
+         .then(response => response.json())
+         .then(jsonData => console.log(jsonData))
+         .catch(error => console.error(error));
+      
+
+
+
+
+            alert("Recieved,processing may take up to an hour.Keep on checking Feedback");
+
+       }
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
