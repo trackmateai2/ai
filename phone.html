@@ -1,0 +1,183 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <script src='phone.js'></script>
+    <Link href="phone.css" rel="stylesheet">
+    
+</head>
+	
+<body>
+
+   
+   
+   
+   <div class="textContainer" id="container">
+        
+        
+        <div class="inputbox">
+            <input required="required" type="text" id="input">
+            
+            <i></i>
+        </div>
+        
+        
+   </div>
+
+
+<div class="one" onClick="one()"></div>
+<div class="two"onClick="two()"></div>
+<div class="three"onClick="three()"></div>
+<div class="four"onClick="four()"></div>
+<div class="five"onClick="five()"></div>
+<div class="six"onClick="six()"></div>
+<div class="seven"onClick="seven()"></div>
+<div class="eight"onClick="eight()"></div>
+<div class="nine"onClick="nine()"></div>
+<div class="zero"onClick="zero()"></div>
+<div class="star"onClick="star()"></div>
+<div class="hash1"onClick="hash()"></div>
+
+
+<div class="call"onClick="call()"></div>
+
+
+
+<image class="back" src="back.png" onClick="cancel()"></image>
+
+
+
+<div class="loader" id="loader" >
+
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+    <p class="ussd"> USSD code running</p>
+    
+</div>
+
+
+
+<div class="alert" id="alertAirtime" >
+
+    <p class="tittle"> Orange Message</p>
+    <p class="body"> You have P1.07 in your main account to be used before 29/06/2025.On-Net balance: P508.75 .National SMS:0</p>
+     
+     <div class="divider"></div>
+     
+     
+     <p class="ok" onClick="ok()">OK</p>
+</div>
+
+
+<!--------------------------------------------OrangeMoney---------------------->
+
+
+
+
+
+<div class="orangeM1" id="orangeM1" >
+
+    
+    <p class="bodyM1"> Scam Alert! Be warned of people claiming to <br/>be Orange employees,DO NOT SHARE your details. <br/> 1 About Orange Money  <br/>2 Orange Money Transactions <br/> 3 Pin Reset                  </p>
+     
+     <div class="inputboxM1">
+          <input required="required" type="text">
+          <i></i>
+     </div>
+    
+    
+    <div class="optionsM1">
+    <p class="cancelM1"> Cancel</p>
+    <p class="sendM1" onClick="send1()"> Send</p>
+    </div>
+    
+    
+</div>
+
+
+
+<div class="orangeM2" id="orangeM2" >
+
+    
+    <p class="bodyM2"> Please enter your secret code  </p>
+     
+     <div class="inputboxM2">
+          <input required="required" type="text" id="inputPin">
+          <i></i>
+     </div>
+    
+    
+    <div class="optionsM2">
+    <p class="cancelM2"> Cancel</p>
+    <p class="sendM2" onClick="send2()"> Send</p>
+    </div>
+    
+    
+</div>
+
+
+<div class="orangeBal" id="orangeBal" >
+
+    
+    <p class="bodyBal"> Account Bal: 17 203.09  <br/> 1 Money Transfer <br/> 2 International Money Transfer <br/> 3 Prepaid Services <br/> 4 Pay <br/> 5 Orange Money Visa <br/> 6 N'stakolle Loan <br/> 7 More           </p>
+     
+     <div class="inputboxBal">
+          <input required="required" type="text">
+          <i></i>
+     </div>
+    
+    
+    <div class="optionsBal">
+    <p class="cancelBal"> Cancel</p>
+    <p class="sendBal" > Send</p>
+    </div>
+    
+    
+</div>
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+<div class="orangeAbs" id="orangeAbs" >
+
+    
+    <p class="bodyAbs"> Account Bal: 17 203.09  <br/> 1 Money Transfer <br/> 2 International Money Transfer <br/> 3 Prepaid Services <br/> 4 Pay <br/> 5 Absa Visa <br/> 6 N'stakolle Loan <br/> 7 More           </p>
+     
+     <div class="inputboxAbs">
+          <input required="required" type="text">
+          <i></i>
+     </div>
+    
+    
+    <div class="optionsAbs">
+    <p class="cancelAbs"> Cancel</p>
+    <p class="sendAbs" onClick="absErr()"> Send</p>
+    </div>
+    
+    
+</div>
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+<script>
+
+  var loader = document.getElementById("loader");
+  loader.classList.add("hidden");
+
+
+</script>
+
+
+	
+	
+</body>
+</html>
+
