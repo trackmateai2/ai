@@ -1,0 +1,660 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <script src='appNewApp.js'></script>
+    <script src='loginFirebase.js'></script>
+    <script src='appNewAppFeedback.js'></script>
+    <Link rel="stylesheet" href="appNewAppMain.css">
+    <Link rel="stylesheet" href="appNewAppMain2.css">
+    <link rel="stylesheet" href="loginFirebase.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238476183262657"
+     crossorigin="anonymous"></script>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300&family=VT323&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Graduate&family=Oxanium:wght@300&family=VT323&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Graduate&family=Marvel&family=Oxanium:wght@300&family=VT323&display=swap');
+       
+</style>
+
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+     
+</head>
+
+<body>
+
+
+
+
+
+    <div id="popup" class="popup" style="display: none;">
+        <!-- Popup content -->
+        <div class="popup-content">
+          <span class="close-btnn" onclick="document.getElementById('popup').style.display='none'">&times;</span>
+          <h2>PC Version!</h2>
+          <image class="pc_ico" src="pc_ico.png"></image>
+          <p>PC version is now available! Enjoy seemless,light and fast tracking experience. <br/><a href="https://drive.google.com/file/d/1WTv2bdgQ9exZYQVKlodOLYxEc3fQipgY/view?usp=drive_link">Download link</a> </p>
+          <a id="downloadLink" style="display: none;"></a>
+          <button class="form-btn" onClick="autoDownload()">Download Now</button>
+          </div>
+    </div>
+       <script>
+        function autoDownload() {
+            var downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = 'https://drive.google.com/file/d/1WTv2bdgQ9exZYQVKlodOLYxEc3fQipgY/view?usp=drive_link';
+            downloadLink.download = 'autodownload';
+            downloadLink.click();
+        }
+       </script>
+
+
+
+    <div id="popup2" class="popup" style="display: none;">
+        <div class="popup-content">
+          <span class="close-btnn" onclick="document.getElementById('popup2').style.display='none'">&times;</span>
+          <h2>Premium Unlocked!</h2>
+          <image class="pc_ico2" src="data:image/jpeg;base64,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"></image>
+          <p>Premium features Unlocked! You can now use TrackMate as a Pro user.   <br/><br/>
+          <!--<a href="https://drive.google.com/file/d/1WTv2bdgQ9exZYQVKlodOLYxEc3fQipgY/view?usp=drive_link">more</a>---> </p>
+          <a id="downloadLink" style="display: none;"></a>
+          <button class="form-btn" onclick="document.getElementById('popup2').style.display='none'" >Close</button>
+          </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------------
+Login Firebase
+**************
+
+------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+  
+  <div class="LoginLay" id="LoginLay"> 
+    
+    <div class="form-container">
+    
+    <image class="lLogo" src="pc_ico.png"></image>
+
+    
+	<p class="title">Login</p>
+	
+	<form class="form">
+	
+		<div class="input-group">
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username" placeholder="">
+		</div>
+		<div class="input-group">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="passwordIn" placeholder="">
+			<div class="forgot">
+				<a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+			</div>
+		</div>
+		<button class="sign" type="button" onClick="signInFirebase()">Sign in</button>
+	</form>
+	
+	<div class="social-message">
+		<div class="line"></div>
+		<p class="message">Login with social accounts</p>
+		<div class="line"></div>
+	</div>
+	<div class="social-icons">
+		<button aria-label="Log in with Google" class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5 fill-current">
+				<path d="M16.318 13.714v5.484h9.078c-0.37 2.354-2.745 6.901-9.078 6.901-5.458 0-9.917-4.521-9.917-10.099s4.458-10.099 9.917-10.099c3.109 0 5.193 1.318 6.38 2.464l4.339-4.182c-2.786-2.599-6.396-4.182-10.719-4.182-8.844 0-16 7.151-16 16s7.156 16 16 16c9.234 0 15.365-6.49 15.365-15.635 0-1.052-0.115-1.854-0.255-2.651z"></path>
+			</svg>
+		</button>
+		<button aria-label="Log in with Twitter" class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5 fill-current">
+				<path d="M31.937 6.093c-1.177 0.516-2.437 0.871-3.765 1.032 1.355-0.813 2.391-2.099 2.885-3.631-1.271 0.74-2.677 1.276-4.172 1.579-1.192-1.276-2.896-2.079-4.787-2.079-3.625 0-6.563 2.937-6.563 6.557 0 0.521 0.063 1.021 0.172 1.495-5.453-0.255-10.287-2.875-13.52-6.833-0.568 0.964-0.891 2.084-0.891 3.303 0 2.281 1.161 4.281 2.916 5.457-1.073-0.031-2.083-0.328-2.968-0.817v0.079c0 3.181 2.26 5.833 5.26 6.437-0.547 0.145-1.131 0.229-1.724 0.229-0.421 0-0.823-0.041-1.224-0.115 0.844 2.604 3.26 4.5 6.14 4.557-2.239 1.755-5.077 2.801-8.135 2.801-0.521 0-1.041-0.025-1.563-0.088 2.917 1.86 6.36 2.948 10.079 2.948 12.067 0 18.661-9.995 18.661-18.651 0-0.276 0-0.557-0.021-0.839 1.287-0.917 2.401-2.079 3.281-3.396z"></path>
+			</svg>
+		</button>
+		<button aria-label="Log in with GitHub" class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5 fill-current">
+				<path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
+			</svg>
+		</button>
+	</div>
+	<p class="signup">Don't have an account?
+		<a rel="noopener noreferrer" href="loginFirebaseSign.html" class="">Sign up</a>
+	</p>
+	
+</div>
+    
+  </div>
+    
+    
+  
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------------
+Login Firebase End
+******************
+
+------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------------
+MainLay Div
+***********
+
+------------------------------------------------------------------------------->
+
+<div class="MainLay" id="MainLay">
+
+
+
+
+
+
+	
+
+
+
+   <input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
+   <label for="drawer-toggle" id="drawer-toggle-label"></label>
+   <p class="header" onClick="premium()">TrackMate AI</p>
+   
+   <nav id="drawer">
+   
+      <!---<image class="navAvatar" src="Img/icon.png"></image>--->
+  <!---- <image class="gif2" src="https://media.giphy.com/media/bJ4TVNYNUympPgcpem/giphy.gif" alt="GIF Image"> </image>---->
+  
+
+<image class="logoM" src="pc_ico.png"></image>
+   <p class="premium" id="premium00">TrackMate</p>
+   <label class="container">
+        <input type="checkbox">
+        <svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521    c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506    c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625    c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191    s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586    s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z"></path></g></g></svg>
+        <svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521    c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506    c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625    c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191    s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586    s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z"></path></g></g></svg>
+        <svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521    c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506    c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625    c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191    s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586    s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z"></path></g></g></svg>
+        <svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521    c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506    c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625    c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191    s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586    s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z"></path></g></g></svg>
+        <svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521    c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506    c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625    c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191    s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586    s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z"></path></g></g></svg>
+        </input>
+   </label>
+
+
+	   
+   
+   
+      <div class="item1" onClick="goHomee()">
+          <svg width="25px" height="25px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M981.4 502.3c-9.1 0-18.3-2.9-26-8.9L539 171.7c-15.3-11.8-36.7-11.8-52 0L70.7 493.4c-18.6 14.4-45.4 10.9-59.7-7.7-14.4-18.6-11-45.4 7.7-59.7L435 104.3c46-35.5 110.2-35.5 156.1 0L1007.5 426c18.6 14.4 22 41.1 7.7 59.7-8.5 10.9-21.1 16.6-33.8 16.6z" fill="#5F6379"></path><path d="M810.4 981.3H215.7c-70.8 0-128.4-57.6-128.4-128.4V534.2c0-23.5 19.1-42.6 42.6-42.6s42.6 19.1 42.6 42.6v318.7c0 23.8 19.4 43.2 43.2 43.2h594.8c23.8 0 43.2-19.4 43.2-43.2V534.2c0-23.5 19.1-42.6 42.6-42.6s42.6 19.1 42.6 42.6v318.7c-0.1 70.8-57.7 128.4-128.5 128.4z" fill="#3688FF"></path></g></svg>
+          <p class="home"> Home</p>
+      </div>
+      
+      <div class="item1">
+          <svg width="25px" height="25px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M896 192H128c-35.3 0-64 28.7-64 64v512c0 35.3 28.7 64 64 64h576.6l191.6 127.7L896 832c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64z" fill="#3D5AFE"></path><path d="M640 512c0-125.4-51.5-238.7-134.5-320H128c-35.3 0-64 28.7-64 64v512c0 35.3 28.7 64 64 64h377.5c83-81.3 134.5-194.6 134.5-320z" fill="#536DFE"></path><path d="M256 512m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" fill="#FFFF8D"></path><path d="M512 512m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" fill="#FFFF00"></path><path d="M768 512m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" fill="#FFEA00"></path></g></svg>
+          <p class="home">Notifications</p>
+      </div>
+      
+      <div class="item1" onClick="startTracking()">
+          <svg height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#EBEBEC;" d="M469.333,0H42.667C19.14,0,0,19.14,0,42.667v307.2c0,23.526,19.14,42.667,42.667,42.667h426.667 c23.526,0,42.667-19.14,42.667-42.667v-307.2C512,19.14,492.86,0,469.333,0z"></path> <path style="fill:#D7D8D9;" d="M25.6,349.867v-307.2C25.6,19.14,44.74,0,68.267,0h-25.6C19.14,0,0,19.14,0,42.667v307.2 c0,23.526,19.14,42.667,42.667,42.667h25.6C44.74,392.533,25.6,373.393,25.6,349.867z"></path> <path style="fill:#6AC8B7;" d="M324.129,476.34l-17.067-93.867c-0.737-4.058-4.272-7.007-8.396-7.007h-85.333 c-4.124,0-7.658,2.949-8.396,7.007l-17.067,93.867c-0.452,2.49,0.223,5.051,1.844,6.994c1.621,1.943,4.021,3.066,6.551,3.066 h119.467c2.53,0,4.93-1.123,6.551-3.066C323.906,481.392,324.581,478.83,324.129,476.34z"></path> <path style="fill:#2DB59F;" d="M307.062,382.474c-0.737-4.058-4.272-7.007-8.396-7.007h-85.333c-4.124,0-7.658,2.949-8.396,7.007 l-4.932,27.126h111.989L307.062,382.474z"></path> <path style="fill:#74DBC9;" d="M332.8,469.333H179.2c-14.115,0-25.6,11.485-25.6,25.6v8.533c0,4.713,3.821,8.533,8.533,8.533 h187.733c4.713,0,8.533-3.821,8.533-8.533v-8.533C358.4,480.818,346.915,469.333,332.8,469.333z"></path> <g> <path style="fill:#6AC8B7;" d="M170.667,503.467v-8.533c0-14.115,11.485-25.6,25.6-25.6H179.2c-14.115,0-25.6,11.485-25.6,25.6 v8.533c0,4.713,3.821,8.533,8.533,8.533H179.2C174.487,512,170.667,508.179,170.667,503.467z"></path> <path style="fill:#6AC8B7;" d="M512,42.667C512,19.14,492.86,0,469.333,0H42.667C19.14,0,0,19.14,0,42.667V51.2h512V42.667z"></path> <path style="fill:#6AC8B7;" d="M42.667,392.533h426.667c23.526,0,42.667-19.14,42.667-42.667H0 C0,373.393,19.14,392.533,42.667,392.533z"></path> </g> <g> <path style="fill:#2DB59F;" d="M68.267,0h-25.6C19.14,0,0,19.14,0,42.667V51.2h25.6v-8.533C25.6,19.14,44.74,0,68.267,0z"></path> <path style="fill:#2DB59F;" d="M25.6,349.867H0c0,23.526,19.14,42.667,42.667,42.667h25.6C44.74,392.533,25.6,373.393,25.6,349.867 z"></path> </g> <path style="fill:#606268;" d="M384,324.267H128c-4.713,0-8.533-3.821-8.533-8.533c0-4.713,3.821-8.533,8.533-8.533h256 c18.821,0,34.133-15.312,34.133-34.133S402.821,238.933,384,238.933H264.533c-28.231,0-51.2-22.969-51.2-51.2s22.969-51.2,51.2-51.2 h153.6c4.713,0,8.533,3.821,8.533,8.533c0,4.713-3.821,8.533-8.533,8.533h-153.6c-18.821,0-34.133,15.312-34.133,34.133 s15.312,34.133,34.133,34.133H384c28.231,0,51.2,22.969,51.2,51.2S412.232,324.267,384,324.267z"></path> <path style="fill:#E5563C;" d="M128,119.467c-42.348,0-76.8,34.452-76.8,76.8c0,39.652,63.059,116.324,70.25,124.936 c1.621,1.941,4.021,3.065,6.55,3.065c2.529,0,4.929-1.123,6.55-3.065c7.19-8.611,70.25-85.283,70.25-124.936 C204.8,153.919,170.348,119.467,128,119.467z"></path> <path style="fill:#CF442B;" d="M68.267,204.8c0-42.348,34.452-76.8,76.8-76.8c8.924,0,17.49,1.547,25.465,4.357 c-12.186-8.135-26.812-12.891-42.531-12.891c-42.348,0-76.8,34.452-76.8,76.8c0,39.652,63.059,116.324,70.25,124.936 c1.621,1.941,4.021,3.065,6.55,3.065c1.742,0,3.414-0.543,4.821-1.508C115.417,301.055,68.267,239.089,68.267,204.8z"></path> <circle style="fill:#EBEBEC;" cx="128" cy="196.267" r="51.2"></circle> <circle style="fill:#D7D8D9;" cx="128" cy="196.267" r="34.133"></circle> <path style="fill:#FDD042;" d="M443.733,93.867h-51.2c-4.713,0-8.533,3.821-8.533,8.533v42.667c0,4.713,3.821,8.533,8.533,8.533 h51.2c4.713,0,8.533-3.821,8.533-8.533V102.4C452.267,97.687,448.446,93.867,443.733,93.867z"></path> <path style="fill:#F07B52;" d="M426.667,110.933V97.402l14.567-14.567c3.332-3.333,3.332-8.735,0-12.068 c-3.333-3.331-8.735-3.331-12.068,0l-11.033,11.034l-11.033-11.034c-3.333-3.331-8.735-3.331-12.068,0 c-3.332,3.333-3.332,8.735,0,12.068L409.6,97.402v13.532H384V128h25.6v25.6h17.067V128h25.6v-17.067H426.667z"></path> </g></svg>
+          <p class="home"> Start Tracking</p>
+      </div>
+      
+
+      <div class="item1" onClick="showCard()">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" xml:space="preserve" width="27px" height="27px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#6C3DB7;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#1F992A;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st2{fill:none;stroke:#6A83BA;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st3{fill:#8A8AFF;stroke:#8A8AFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st4{fill:#6C3DB7;stroke:#6C3DB7;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st5{fill:#A576FF;stroke:#A576FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st6{fill:#F2BB41;stroke:#F2BB41;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st7{fill:#E08838;stroke:#E08838;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st8{fill:#1F992A;stroke:#1F992A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st9{fill:#5EC11E;stroke:#5EC11E;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st10{fill:#E3FAFF;stroke:#E3FAFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st11{fill:#2546ef;stroke:#2546ef;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st12{fill:#B7257F;stroke:#B7257F;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st13{fill:#5189E5;stroke:#5189E5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st14{fill:#6EBAFF;stroke:#6EBAFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st15{fill:#EDD977;stroke:#EDD977;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st16{fill:#8C43FF;stroke:#8C43FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st17{fill:#5252BA;stroke:#5252BA;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st18{fill:none;stroke:#E3FAFF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st19{fill:#354C75;stroke:#354C75;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} </style> <path class="st11" d="M26,12c0,8-11,17-11,17S4,20,4,12C4,5.9,8.9,1,15,1S26,5.9,26,12z"></path> <circle class="st12" cx="15" cy="12" r="7"></circle> <circle class="st10" cx="15" cy="12" r="3"></circle> </g></svg>
+          <p class="home"> Tracking Results</p>
+      </div>
+      
+      <div class="item1" onClick="hackerVersion()">
+          <svg width="25px" height="25px" viewBox="-38.23 0 363.855 363.855" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.a{fill:#4d4544;}.b{fill:#ffffff;}.c{fill:#211715;}.d{fill:#d9d9d9;}</style></defs><path class="a" d="M239.005,329c8.871-1.667,13.211-.933,21.868-7.279,7.336-5.378,17.331-10.038,21.7-18.415a24.825,24.825,0,0,0,2.36-13.177,129.959,129.959,0,0,0-6.221-32.687c-3.763-11.155-20.577-49.878-23.321-58.041-2.988-8.885-6.3-18.07-13-24.626-3.694-3.613-8.212-6.214-12.815-8.607-3.622-2.137-23.116-12.48-24.713-13.338,8.29-5.6,15.053-11.526,20.925-22.532a34.724,34.724,0,0,0,2.861-6.889c4.07-14.408,1.679-29.753-.738-44.529-1.354-8.281-11.8-40.761-33.4-55.872-10.211-7.145-42.153-19.8-53.787-20.638-11.642.833-43.589,13.492-53.8,20.638-21.6,15.111-32.042,47.591-33.4,55.872C51.11,93.655,48.72,109,52.79,123.408a34.78,34.78,0,0,0,2.86,6.889c5.878,11.016,12.649,16.945,20.916,22.567-2.085,1.022-15.179,9.565-18.784,11.692-4.6,2.393-9.121,4.994-12.815,8.608-6.7,6.555-10.012,15.74-13,24.625-2.744,8.163-19.558,46.886-23.321,58.041a129.923,129.923,0,0,0-6.221,32.687,24.825,24.825,0,0,0,2.36,13.177c4.365,8.377,14.36,13.037,21.7,18.416a54.172,54.172,0,0,0,21.8,7.717"></path><path class="b" d="M88.743,121.908c-3.323-7.186-4.95-16.278-4.085-27.79,9.666-9.575,32.56-22.55,54.927-22.55s45.26,12.975,54.926,22.55c2.336,26.018-13.071,46.667-28.508,50.54a95.426,95.426,0,0,1-19.971,3.09c-7.118.3-19.129-.581-19.129-.581C111.637,144.337,96.069,137.753,88.743,121.908Z"></path><path class="c" d="M228.452,203.106c-3.753,15.29-7.728,30.576-10.689,46.045-.517,2.7-1,5.413-1.3,8.146-.289,2.583-.221,5.2-.251,7.8-.068,5.971-.06,11.942-.029,17.914.041,8.075.1,16.151.1,24.226,0,3.089,4.8,3.094,4.8,0,0-13.158-.2-26.317-.094-39.474.023-2.915-.018-5.848.129-8.758.023-.454.064-.907.11-1.358.055-.535.113-1,.148-1.251.188-1.343.416-2.681.656-4.016,1.316-7.3,3-14.532,4.7-21.75,2.058-8.764,4.211-17.5,6.357-26.248.736-3-3.891-4.279-4.628-1.276Z"></path><path class="c" d="M238.182,275.72a75.482,75.482,0,0,1,6.672,4.061c1.043.712,2.065,1.454,3.072,2.216.1.075.279.213.078.057l.373.292q.418.328.833.665.781.633,1.547,1.287a2.4,2.4,0,0,0,3.394-3.394,78.26,78.26,0,0,0-13.547-9.329,2.4,2.4,0,0,0-2.422,4.145Z"></path><path class="c" d="M53.69,204.382c3.723,15.17,7.654,30.334,10.618,45.675.285,1.477.557,2.957.8,4.442.2,1.224.318,2,.427,3.033.278,2.623.2,5.29.229,7.924.065,5.911.055,11.822.025,17.733-.042,8.016-.1,16.032-.1,24.048,0,3.089,4.8,3.094,4.8,0,0-13.275.2-26.551.091-39.826-.024-2.859.035-5.743-.137-8.6a64.439,64.439,0,0,0-1.014-7.37c-1.306-7.34-3-14.613-4.7-21.869-2.073-8.838-4.245-17.653-6.408-26.469-.736-3-5.366-1.728-4.629,1.276Z"></path><path class="c" d="M46.166,271.575A78.3,78.3,0,0,0,32.619,280.9a2.412,2.412,0,0,0,0,3.394,2.462,2.462,0,0,0,3.4,0c.48-.409.964-.815,1.454-1.213q.414-.336.832-.666l.373-.292c.315-.244-.24.183.077-.058q1.555-1.182,3.167-2.288a75.32,75.32,0,0,1,6.671-4.061,2.421,2.421,0,0,0,.861-3.284,2.451,2.451,0,0,0-3.283-.861Z"></path><path class="c" d="M143.636,222.965c-39.487.285-78.783.515-92.735.562a4.01,4.01,0,0,0-4,4.029c.081,22.669,1.174,101.122,2.007,129.958a4.017,4.017,0,0,0,4.086,3.9c12.609-.195,51.663-.075,90.641.058,38.977-.133,78.031-.253,90.641-.058a4.016,4.016,0,0,0,4.085-3.9c.833-28.836,1.927-107.289,2.007-129.958a4.01,4.01,0,0,0-4-4.029C222.418,223.48,183.122,223.25,143.636,222.965Z"></path><path class="a" d="M65.948,349.623c19.134-.119,38.27-.017,57.4.042,23.359.072,46.716-.038,70.075-.072,9.3-.014,18.6-.028,27.9.03,3.09.019,3.093-4.781,0-4.8-19.134-.119-38.27-.017-57.4.042-23.358.072-46.716-.038-70.074-.072-9.3-.014-18.6-.028-27.9.03-3.088.019-3.094,4.819,0,4.8Z"></path><path class="c" d="M48.28,325.427q-.249-.03-.5-.063c.346.046-.085-.013-.128-.019-.354-.052-.708-.106-1.061-.165q-1.279-.212-2.547-.489a50.211,50.211,0,0,1-5.25-1.459,48.165,48.165,0,0,1-12.236-6.007c-6.394-4.484-14.185-8.193-18.613-14.9a21.426,21.426,0,0,1-3.171-12.938,125.184,125.184,0,0,1,7.907-37.637c4.524-11.834,9.528-23.486,14.369-35.191,2.047-4.95,4.11-9.895,6.037-14.893,2.455-6.367,4.283-12.939,7.656-18.921a33.937,33.937,0,0,1,8.5-10.156c3.3-2.6,7.082-4.325,10.644-6.5,5.171-3.161,10.219-6.52,15.386-9.688.77-.473,1.541-.95,2.336-1.379,2.719-1.468.3-5.614-2.422-4.145-5.149,2.78-9.993,6.215-14.94,9.332-2.871,1.809-5.871,3.35-8.778,5.095a40.177,40.177,0,0,0-11.155,9.484c-5.412,6.91-8.05,15.139-10.98,23.281-1.616,4.491-3.482,8.9-5.3,13.31-5.061,12.3-10.3,24.54-15.144,36.933a126.586,126.586,0,0,0-6.167,20.223A144.745,144.745,0,0,0,.331,284.746c-.481,5.183-.686,10.43,1.169,15.4,3.162,8.462,10.883,13.509,18.132,18.223,1.757,1.143,3.516,2.287,5.218,3.512a39.468,39.468,0,0,0,6.675,3.589,55.6,55.6,0,0,0,11.83,3.979c1.629.337,3.274.579,4.925.783a2.413,2.413,0,0,0,2.4-2.4,2.46,2.46,0,0,0-2.4-2.4Z"></path><path class="c" d="M239.643,331.313c3.955-.733,8.03-1.018,11.908-2.123,4.548-1.3,8.261-3.856,12.1-6.512,7.237-5,15.691-9.282,20.376-17.07a26.663,26.663,0,0,0,3.3-15.48,145.49,145.49,0,0,0-2.111-16.99,124.183,124.183,0,0,0-6.5-22.574c-5.016-12.909-10.492-25.637-15.753-38.447-1.794-4.371-3.675-8.736-5.209-13.207-3.167-9.231-6.523-18.844-13.666-25.833-5.408-5.29-12.469-8.595-19.06-12.17-5.552-3.012-11.127-5.981-16.7-8.95l-2.034-1.083c-2.724-1.455-5.151,2.687-2.422,4.144q6.993,3.735,13.986,7.471c2.669,1.434,5.338,2.87,7.992,4.333,2.857,1.576,5.772,3.071,8.539,4.8a34.023,34.023,0,0,1,10.313,9.642,58.889,58.889,0,0,1,6.278,12.772c1.86,5.018,3.573,10.049,5.584,15.011,5.112,12.617,10.47,25.133,15.538,37.768a165.2,165.2,0,0,1,5.96,16.642,125.531,125.531,0,0,1,3.4,16.284c.38,2.664.665,5.344.89,8.026a36.993,36.993,0,0,1,.056,8.052,20.021,20.021,0,0,1-5.8,11.506,59.039,59.039,0,0,1-10.069,7.7c-1.826,1.191-3.664,2.366-5.456,3.61a65.8,65.8,0,0,1-5.936,3.921,31.075,31.075,0,0,1-10.516,3.133c-2.092.314-4.185.611-6.265,1a2.421,2.421,0,0,0-1.676,2.952,2.451,2.451,0,0,0,2.952,1.676Z"></path><path class="c" d="M89.608,163.489a61.672,61.672,0,0,0,21.376,8.532,2.463,2.463,0,0,0,2.952-1.676,2.421,2.421,0,0,0-1.676-2.952,57.982,57.982,0,0,1-20.229-8.049c-2.613-1.666-5.023,2.487-2.423,4.145Z"></path><path class="c" d="M77.59,150.664a60.672,60.672,0,0,1-15.778-14.891,47.184,47.184,0,0,1-6.248-11.534,51.285,51.285,0,0,1-2.446-13.64c-.553-9.647.812-19.269,2.347-28.768a75.023,75.023,0,0,1,2.922-11.794c3.866-11.626,9.473-23.111,17.194-32.8a58.429,58.429,0,0,1,13.972-13.1,117.269,117.269,0,0,1,14.562-7.562q8.93-4.053,18.2-7.3a90.48,90.48,0,0,1,15.887-4.33c.368-.056-.4.049-.042,0,.1-.012.193-.026.29-.036.249-.027.5-.055.746-.076.453-.039.908-.066,1.363-.071a21.794,21.794,0,0,1,2.854.188c.28.034-.089-.013-.12-.017.142.02.284.04.425.062.293.046.585.093.877.144.621.109,1.239.231,1.856.362,1.276.272,2.543.586,3.8.924a159.536,159.536,0,0,1,18.168,6.26c5.833,2.351,11.587,4.937,17.16,7.853a59.286,59.286,0,0,1,13.5,9.287c9.538,8.988,16.433,20.984,21.269,32.908a104.013,104.013,0,0,1,4.519,13.444c.512,2.019.843,4.053,1.173,6.109.765,4.752,1.478,9.512,1.922,14.306.858,9.261.944,19.182-2.241,28.053a48.216,48.216,0,0,1-6.217,11.283,51.972,51.972,0,0,1-7.467,8.373,75.344,75.344,0,0,1-8.2,6.355c-2.533,1.734-.135,5.9,2.423,4.144a67.552,67.552,0,0,0,17.04-15.967,54.98,54.98,0,0,0,6.738-12.089,51.225,51.225,0,0,0,2.942-14.3c.835-9.968-.5-19.975-2.055-29.807A85.038,85.038,0,0,0,227.824,69.2a114.154,114.154,0,0,0-18.049-34.695A63.552,63.552,0,0,0,194.708,20.25a113.551,113.551,0,0,0-14.985-7.885c-6.372-2.913-12.876-5.569-19.5-7.859A82.284,82.284,0,0,0,143.314.145c-4.609-.553-9.248.57-13.668,1.791a171.032,171.032,0,0,0-18.61,6.491c-11.423,4.628-23.286,9.63-32.325,18.246C68.608,36.3,61.526,48.88,56.349,61.725a101.313,101.313,0,0,0-4.534,13.667c-.6,2.465-.955,4.979-1.349,7.484-.79,5.021-1.507,10.061-1.92,15.129a87.1,87.1,0,0,0-.058,14.907,49.986,49.986,0,0,0,3.064,14.248,57.433,57.433,0,0,0,14.71,20.78,85.452,85.452,0,0,0,8.905,6.868c2.556,1.75,4.96-2.408,2.423-4.144Z"></path><path class="c" d="M190.756,159.344a57.99,57.99,0,0,1-20.229,8.049,2.423,2.423,0,0,0-1.677,2.952,2.451,2.451,0,0,0,2.953,1.676,61.668,61.668,0,0,0,21.375-8.532c2.6-1.656.193-5.812-2.422-4.145Z"></path><path class="a" d="M130.172,283.91c.048-.224.119-.436.183-.655.087-.3-.218.429-.066.154.049-.088.09-.181.14-.27a4.279,4.279,0,0,1,.374-.579c.028.015-.405.454-.084.125.091-.093.175-.192.267-.284.071-.071.434-.484.526-.472.007,0-.5.338-.106.091.089-.056.174-.118.264-.174q.267-.168.551-.311a2.827,2.827,0,0,1,.284-.136c-.309.126-.379.157-.21.091.073-.028.146-.055.221-.08a6.485,6.485,0,0,1,.626-.181c.109-.026.218-.045.326-.07.417-.1-.073.023-.143.011a4.287,4.287,0,0,0,.665-.041c.138,0,.276,0,.414.012.421.027.1.083-.066-.02a3.184,3.184,0,0,0,.635.151l.154.051q.3.114.013,0c-.231-.208-.031,0,.078.057s.183.119.277.171c.281.153-.326-.307-.116-.093.083.085.174.174.263.253.308.277-.2-.32-.051-.087.108.168.217.329.31.506.213.409-.092,0-.026-.095a2.754,2.754,0,0,0,.1.286c.061.194.1.391.147.589.048.227-.072.246-.023-.185a4.1,4.1,0,0,0,.022.455c0,.1-.007.2-.009.3,0,.292-.123.048.038-.188-.051.075-.05.587-.149.594.016,0,.213-.455.049-.12-.048.1-.094.2-.145.295a7.519,7.519,0,0,1-.417.709,1.335,1.335,0,0,1-.188.27c.163-.065.273-.328.073-.1-.162.187-.324.371-.5.545-.156.155-.325.293-.486.443-.237.219.366-.25.1-.073-.146.1-.286.2-.435.293-.2.125-.417.222-.622.342-.288.168.4-.135.086-.031-.14.045-.276.1-.418.143s-.595.065-.686.158c.052-.052.569-.025.114-.028-.171,0-.344,0-.514,0-.394.01.185-.056.155.032a3.118,3.118,0,0,1-.4-.085c-.1-.027-.2-.069-.31-.094q-.255-.09.2.094c-.074-.033-.146-.069-.217-.107-.095-.05-.188-.1-.279-.161-.386-.245.012-.085.035.042a2.309,2.309,0,0,0-.232-.22c-.36-.3.208.385-.042-.04-.127-.215-.43-.586-.44-.84,0,.045.189.508.029.057-.062-.176-.126-.35-.18-.529-.035-.119-.067-.239-.1-.359-.018-.08-.079-.593-.053-.227.029.4,0-.208,0-.234,0-.142.086-.728-.01-.161a2.458,2.458,0,0,0-1.676-2.952,2.428,2.428,0,0,0-2.952,1.676,8.625,8.625,0,0,0,.87,5.324A6.3,6.3,0,0,0,130.1,291.2c2.992,1.054,6.4-.349,8.447-2.606a8.74,8.74,0,0,0,2.2-3.87,7.663,7.663,0,0,0-.547-4.674,6.08,6.08,0,0,0-2.928-2.991,8.185,8.185,0,0,0-4.922-.555,8.486,8.486,0,0,0-6.812,6.133,2.4,2.4,0,1,0,4.628,1.276Z"></path><path class="a" d="M162.727,282.634c-1.3-6.1-10.53-8.74-14.235-3.372a7.092,7.092,0,0,0-1.141,4.071,7.45,7.45,0,0,0,1.474,4.134,8.818,8.818,0,0,0,8.4,3.96,6.269,6.269,0,0,0,4.371-2.963,8.553,8.553,0,0,0,1.133-5.83,2.411,2.411,0,0,0-2.953-1.676,2.468,2.468,0,0,0-1.676,2.952c-.085-.5-.011-.162-.014-.042,0,.155-.013.324-.007.48.014.341.1-.419.016-.088-.03.119-.049.242-.079.362-.068.273-.164.532-.253.8-.04.119-.1.424.029-.057a2.339,2.339,0,0,1-.2.429c-.058.112-.119.223-.186.33l-.05.081q-.246.354.067-.078a2.165,2.165,0,0,1-.222.231c-.246.26.11-.041.116-.069-.02.105-.454.28-.55.332-.381.21.078-.063.129-.05a2.642,2.642,0,0,0-.465.141,1.844,1.844,0,0,0-.318.064c.064-.034.575-.034.156-.032-.145,0-.582.078-.69-.014.117.1.438.085.116.01-.115-.027-.229-.049-.343-.08-.143-.037-.283-.081-.422-.13-.5-.175,0-.006,0,.009s-.583-.307-.626-.333c-.127-.076-.25-.157-.372-.241-.072-.05-.353-.286-.093-.06.275.238-.26-.239-.318-.294a7.582,7.582,0,0,1-.564-.6c-.063-.073-.242-.365-.069-.078s0-.017-.054-.09c-.138-.2-.267-.415-.386-.631a5.679,5.679,0,0,0-.29-.591c.055.077.151.5.059.116-.032-.138-.046-.307-.091-.44.022.064.034.588.038.188,0-.1-.009-.2-.009-.3s.008-.2.011-.3c.008-.409-.018.126-.037.183.062-.188.075-.4.129-.594.028-.1.064-.192.091-.289.132-.475-.227.419-.008.019.1-.175.2-.342.3-.512.225-.364-.071.144-.1.136a2.621,2.621,0,0,0,.253-.264c.141-.134.27-.1.043-.053l-.12.094c.067-.048.135-.093.205-.134.092-.057.193-.1.284-.159q.243-.12-.2.075c.075-.03.151-.058.229-.082.208-.069.419-.107.631-.162.318-.083-.481.03-.151.018.138,0,.275-.021.413-.024.223,0,.443.01.665.023.371.023-.1-.056-.141-.023.053-.044.434.085.49.1a6.773,6.773,0,0,1,.7.207c.087.031.405.171.079.022-.366-.166.143.077.213.113a7,7,0,0,1,.614.361,1.92,1.92,0,0,1,.26.18q-.412-.327-.114-.083l.119.1c.2.174.373.362.552.553.128.136.14.3-.083-.125.068.13.18.255.258.381.054.087.1.175.153.265.04.075.25.48.073.125s.015.071.036.138c.044.146.078.293.11.441a2.416,2.416,0,0,0,2.952,1.676A2.457,2.457,0,0,0,162.727,282.634Z"></path><path class="a" d="M165.973,268.1c-7.934-8.041-20.693-10.139-31.384-7.4A27.347,27.347,0,0,0,119.1,270.85a20.864,20.864,0,0,0-3.4,17.421c1.65,6.539,6.531,13.491,13.181,15.588l-1.762-2.315q.058,3.582.112,7.164c.018,1.2.01,2.4.928,3.3a5.25,5.25,0,0,0,3.231,1.2c2.36.243,4.81.1,7.179.108,5.328.016,10.661.055,15.988-.041,2.438-.044,5.33-.5,5.535-3.462.189-2.738.091-5.525.136-8.269l-1.762,2.315c6.707-2.115,11.629-9.172,13.228-15.782,1.768-7.309-.613-14.587-5.725-19.977-2.13-2.246-5.52,1.152-3.394,3.394a16.514,16.514,0,0,1,4.49,15.307,20.123,20.123,0,0,1-3.646,7.539,13.454,13.454,0,0,1-6.229,4.89,2.468,2.468,0,0,0-1.762,2.314q-.036,2.148-.068,4.3-.015.955-.029,1.912a10.5,10.5,0,0,1-.065,1.842l.617-1.059c.506-.473-.026-.127-.348-.089-.344.04-.7.025-1.046.031-.318.006-.636.009-.954.012-.914.01-1.828.015-2.742.02q-3.559.018-7.119.015t-7.119-.015q-1.326-.006-2.652-.019c-.326,0-.652-.006-.977-.012-.3,0-.6,0-.9-.023-.339-.026-1.07-.4-.561.08l.617,1.059a17.058,17.058,0,0,1-.094-3.754q-.033-2.148-.068-4.3a2.465,2.465,0,0,0-1.762-2.314c-4.642-1.464-8.1-6.647-9.5-11.079a16.141,16.141,0,0,1,1.922-13.922c5.213-8.02,15.182-10.24,24.149-9.715a24.677,24.677,0,0,1,15.847,6.98C164.752,273.7,168.146,270.3,165.973,268.1Z"></path><path class="a" d="M146.305,304.4v5.42a2.476,2.476,0,0,0,.7,1.7,2.4,2.4,0,0,0,4.1-1.7V304.4a2.475,2.475,0,0,0-.7-1.7,2.4,2.4,0,0,0-4.1,1.7Z"></path><path class="a" d="M136.258,304.4v5.42a2.477,2.477,0,0,0,.7,1.7,2.4,2.4,0,0,0,4.1-1.7V304.4a2.475,2.475,0,0,0-.7-1.7,2.4,2.4,0,0,0-4.1,1.7Z"></path><path class="d" d="M84.658,94.118c9.666-9.575,32.56-22.55,54.927-22.55s45.26,12.975,54.926,22.55c.909,5.778-38.673-7.635-55.589-7.635C125.811,86.483,83.793,105.63,84.658,94.118Z"></path><path class="c" d="M92.434,128.248a38.482,38.482,0,0,1-3.693-6.345,42.686,42.686,0,0,1-2.4-6.6l1.991-.5c12.915-3.243,32.382-9.834,43.588-17.028,2.68-1.72,5.619-3.627,8.776-3.206a12.378,12.378,0,0,1,5.287,2.534l1.046.672c11.206,7.194,30.673,13.785,43.588,17.028l1.839.462c-4.613,15.509-15.525,26.656-26.451,29.4a95.426,95.426,0,0,1-19.971,3.09c-7.118.3-19.129-.581-19.129-.581C113.856,144.748,100.589,139.588,92.434,128.248Z"></path><path class="c" d="M88.968,117.113c6.642-1.673,13.211-3.654,19.681-5.9a150.962,150.962,0,0,0,20.2-8.423c3-1.558,5.737-3.633,8.774-5.09a5.932,5.932,0,0,1,4.907-.4,29.136,29.136,0,0,1,4.422,2.727,116.067,116.067,0,0,0,19.676,9.536,191.742,191.742,0,0,0,23.345,7.554c3,.756,4.274-3.872,1.276-4.628a192.367,192.367,0,0,1-20.854-6.593,119.627,119.627,0,0,1-20.011-9.387c-3.262-1.985-6.377-4.73-10.462-4.362-3.957.357-7.076,2.863-10.388,4.794a117.541,117.541,0,0,1-19.169,8.583,232.99,232.99,0,0,1-22.677,6.965c-2.994.754-1.725,5.385,1.276,4.628Z"></path><path class="a" d="M137.992,102.626c-.156,12.767.042,25.535-.114,38.3-.037,3.09,4.763,3.092,4.8,0,.156-12.766-.042-25.534.114-38.3.037-3.09-4.763-3.092-4.8,0Z"></path><path class="c" d="M90.813,120.692c-3.785-8.278-4.4-17.61-3.755-26.574l-.7,1.7a71.045,71.045,0,0,1,16-11.385,89.545,89.545,0,0,1,23.073-8.816,62.965,62.965,0,0,1,25.169-.639,86.812,86.812,0,0,1,23.613,8.089c6.682,3.386,13.238,7.473,18.6,12.751l-.7-1.7a52.965,52.965,0,0,1-6.9,31.773c-4.329,7.243-11.017,13.937-19.08,16.248a88.6,88.6,0,0,1-26,3.245c-4.158-.076-8.316-.284-12.465-.565-.25-.016-.5-.022-.753-.052.813.1-.319-.1-.395-.11l-.684-.137q-1.028-.21-2.051-.444a77.075,77.075,0,0,1-7.446-2.08,49.3,49.3,0,0,1-14.7-7.632,37.327,37.327,0,0,1-10.824-13.672,2.42,2.42,0,0,0-3.284-.861,2.455,2.455,0,0,0-.861,3.284c4.452,9.509,12.45,16.644,21.931,20.957a72.8,72.8,0,0,0,14.247,4.71A55.619,55.619,0,0,0,132.4,149.9c4.692.242,9.414.45,14.111.226a97.968,97.968,0,0,0,16.684-2.3,42.461,42.461,0,0,0,8.327-2.609,36.334,36.334,0,0,0,10.351-7.305,52.2,52.2,0,0,0,14.029-26.518,55.912,55.912,0,0,0,1.006-17.274c-.233-2.09-2.961-3.828-4.5-5.077q-2.853-2.314-5.911-4.363a94.631,94.631,0,0,0-31.068-13.6,68.844,68.844,0,0,0-18.183-1.866,75.032,75.032,0,0,0-18.038,3.052A94.641,94.641,0,0,0,89.624,86.824a67.578,67.578,0,0,0-5.3,4.306c-.955.869-1.922,1.613-2.065,2.988-.175,1.69-.206,3.41-.225,5.108A60.409,60.409,0,0,0,84.068,116.1a47.886,47.886,0,0,0,2.6,7.014,2.42,2.42,0,0,0,3.284.861A2.457,2.457,0,0,0,90.813,120.692Z"></path><path class="c" d="M143.636,220.565q-41.394.3-82.788.519l-6.34.029c-1.908.008-4.083-.248-5.883.454-2.887,1.124-4.133,3.773-4.12,6.73q.007,2.028.023,4.057.081,11.676.232,23.354.368,31.124.91,62.246.243,13.923.544,27.844.12,5.295.263,10.59c.086,3.088,1.13,5.851,4.246,7.023,1.737.655,3.8.38,5.623.363,25.287-.227,50.581-.024,75.868.06,28.8.095,57.608-.168,86.412-.115,4.239.007,8.477.019,12.716.059,2.047.02,4.2.274,6.075-.747,2.7-1.474,3.307-4.1,3.385-6.932.22-7.935.382-15.872.536-23.809q.606-31.2,1-62.4.18-13.722.323-27.446.051-5.229.089-10.459c.009-1.329.026-2.659.022-3.989a6.6,6.6,0,0,0-4.746-6.651c-1.771-.486-3.883-.226-5.71-.234q-3.23-.013-6.458-.03-8.049-.039-16.1-.086-21.425-.123-42.849-.268-11.637-.078-23.273-.162c-3.09-.023-3.093,4.777,0,4.8q40.819.294,81.64.513,3.051.017,6.1.029c1.643.007,3.355-.121,4.992.02,1.818.157,1.6,1.921,1.592,3.308q-.01,2.031-.025,4.063-.086,11.637-.236,23.273-.361,30.375-.888,60.748-.238,13.678-.531,27.356-.119,5.37-.261,10.739c-.034,1.268.276,3.289-1.4,3.59a12.842,12.842,0,0,1-2.286-.016q-1.248-.014-2.5-.023c-24.925-.193-49.856-.013-74.782.069-28.262.093-56.525-.157-84.787-.118-4.427.006-8.854.016-13.28.053a22.757,22.757,0,0,1-4.366.019c-1.742-.349-1.349-2.644-1.385-3.973-.214-7.963-.376-15.928-.529-23.893q-.585-30.456-.968-60.917-.177-13.392-.318-26.786-.052-5.251-.092-10.5-.015-2-.024-4c-.008-1.583.005-2.966,1.952-2.99,23.193-.283,46.394-.246,69.589-.4q11.394-.078,22.787-.159C146.723,225.342,146.73,220.542,143.636,220.565Z"></path></g></svg>
+          <p class="home"> Hacker Version</p>
+      </div>
+      
+      <div class="item1" onClick="privacyPolicy()">
+          <svg width="25px" height="25px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M810.666667 149.333333H213.333333c-23.466667 0-42.666667 19.2-42.666666 42.666667v128c0 23.466667 19.2 42.666667 42.666666 42.666667h597.333334c23.466667 0 42.666667-19.2 42.666666-42.666667V192c0-23.466667-19.2-42.666667-42.666666-42.666667zM810.666667 405.333333H213.333333c-23.466667 0-42.666667 19.2-42.666666 42.666667v128c0 23.466667 19.2 42.666667 42.666666 42.666667h535.466667c27.733333-27.733333 104.533333-19.2 104.533333-42.666667v-128c0-23.466667-19.2-42.666667-42.666666-42.666667zM733.866667 661.333333H213.333333c-23.466667 0-42.666667 19.2-42.666666 42.666667v128c0 23.466667 19.2 42.666667 42.666666 42.666667h597.333334c23.466667 0 42.666667-19.2 42.666666-42.666667v-51.2c0-66.133333-53.333333-119.466667-119.466666-119.466667z" fill="#D1C4E9"></path><path d="M917.333333 981.333333l-42.666666 42.666667h-42.666667l-42.666667-42.666667V755.2h128V853.333333l-21.333333 21.333334 21.333333 21.333333v21.333333l-21.333333 21.333334 21.333333 21.333333z" fill="#FFA000"></path><path d="M1013.333333 608c-6.4-19.2-21.333333-34.133333-42.666666-38.4-27.733333-6.4-70.4-14.933333-117.333334-14.933333s-89.6 8.533333-117.333333 12.8c-21.333333 4.266667-36.266667 19.2-42.666667 38.4-4.266667 21.333333-10.666667 46.933333-10.666666 76.8s6.4 55.466667 10.666666 74.666666c6.4 19.2 21.333333 34.133333 42.666667 38.4 27.733333 6.4 68.266667 12.8 117.333333 12.8s89.6-8.533333 117.333334-12.8c21.333333-4.266667 36.266667-19.2 42.666666-38.4 6.4-19.2 10.666667-44.8 10.666667-74.666666s-6.4-55.466667-10.666667-74.666667zM915.2 661.333333h-121.6c-12.8 0-23.466667-10.666667-23.466667-23.466666v-29.866667c0-6.4 38.4-12.8 85.333334-12.8s85.333333 6.4 85.333333 12.8v29.866667c-2.133333 12.8-12.8 23.466667-25.6 23.466666z" fill="#FFA000"></path><path d="M832 791.466667h21.333333V1024h-21.333333z" fill="#D68600"></path></g></svg>
+          <p class="home"> Privacy Policy</p>
+      </div>
+      
+      <div class="item1" onClick="premium()">
+          <svg height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504 504" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle style="fill:#FD8469;" cx="252" cy="252" r="252"></circle> <polygon style="fill:#2B3B4E;" points="316.4,422.4 252,391.6 187.6,422.4 187.6,292 316.4,292 "></polygon> <circle style="fill:#324A5E;" cx="252" cy="212.8" r="118.4"></circle> <circle style="fill:#FFFFFF;" cx="252" cy="212.8" r="92"></circle> <path style="fill:#F9B54C;" d="M252,170.4c11.6-14.4,27.2-17.6,38.8-13.2c27.6,10.8,34.4,51.2,10.4,76.4 C252,286.4,252,286.4,252,286.4s0,0-49.2-52.4c-24-25.6-17.2-66,10.4-76.4C224.8,152.8,240.4,156,252,170.4z"></path> </g></svg>
+          <p class="home"> Premium</p>
+      </div>
+      
+      <div class="item1" onClick="disclaimer()">
+          <svg width="25px" height="25px" viewBox="0 0 64 64" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#B4E6DD;} .st1{fill:#80D4C4;} .st2{fill:#D2F0EA;} .st3{fill:#FFFFFF;} .st4{fill:#FBD872;} .st5{fill:#DB7767;} .st6{fill:#F38E7A;} .st7{fill:#F6AF62;} .st8{fill:#32A48E;} .st9{fill:#A38FD8;} .st10{fill:#7C64BD;} .st11{fill:#EAA157;} .st12{fill:#9681CF;} .st13{fill:#F9C46A;} .st14{fill:#CE6B61;} </style> <g> <path class="st0" d="M48.7,13.36l-15.73-5.2c-0.63-0.21-1.31-0.21-1.93,0l-15.73,5.2c-1.26,0.42-2.11,1.6-2.11,2.92v19.6 c0,4.1,1.89,7.98,5.12,10.51l11.16,8.73c1.49,1.16,3.57,1.16,5.06,0l11.16-8.73c3.23-2.53,5.12-6.41,5.12-10.51v-19.6 C50.81,14.96,49.96,13.78,48.7,13.36z"></path> <path class="st2" d="M32,52c-0.04,0-0.06-0.02-0.07-0.02l-11.16-8.73c-2.28-1.78-3.58-4.47-3.58-7.36V16.95L32,12.05l14.81,4.9 v18.94c0,2.89-1.31,5.58-3.58,7.36l-11.16,8.74L32,52z"></path> <circle class="st6" cx="32" cy="29.65" r="11.71"></circle> <g> <path class="st3" d="M31.21,34.47c0.25-0.06,0.51-0.11,0.78-0.11c0.29,0,0.56,0.05,0.82,0.12l1.19-10.67 c0.05-0.52,0.07-0.93,0.07-1.22c0-0.91-0.2-1.6-0.59-2.06c-0.4-0.46-0.88-0.69-1.45-0.69c-0.57,0-1.06,0.23-1.47,0.69 c-0.41,0.46-0.61,1.08-0.61,1.84c0,0.32,0.04,0.8,0.11,1.44L31.21,34.47z"></path> <path class="st3" d="M31.98,35.42c-0.56,0-1.04,0.2-1.43,0.59c-0.4,0.4-0.59,0.87-0.59,1.41c0,0.56,0.2,1.04,0.59,1.43 c0.4,0.4,0.87,0.59,1.43,0.59s1.04-0.2,1.43-0.59c0.4-0.4,0.59-0.87,0.59-1.43c0-0.55-0.2-1.02-0.59-1.41 C33.02,35.62,32.54,35.42,31.98,35.42z"></path> </g> </g> </g></svg>
+          <p class="home"> Disclaimer</p>
+      </div>
+
+      <div class="item1">
+          <svg width="25px" height="25px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <polygon fill="#FFDD95" points="31 5 55.249 19 55.249 47 31 61 6.751 47 6.751 19"></polygon> <circle cx="31" cy="5" r="3" fill="#35c6e3"></circle> <circle cx="31" cy="60" r="3" fill="#35c6e3"></circle> <circle cx="55" cy="47" r="3" fill="#35c6e3"></circle> <circle cx="7" cy="47" r="3" fill="#35c6e3"></circle> <circle cx="55" cy="19" r="3" fill="#35c6e3"></circle> <circle cx="7" cy="19" r="3" fill="#35c6e3"></circle> <path fill="#22BA8E" d="M23.3800958,28.2085229 L21.8076118,26.636039 L24.636039,23.8076118 L26.2085229,25.3800958 C27.0544216,24.8470663 27.9952899,24.4509973 29,24.2230164 L29,22 L33,22 L33,24.2230164 C34.0047101,24.4509973 34.9455784,24.8470663 35.7914771,25.3800958 L37.363961,23.8076118 L40.1923882,26.636039 L38.6199042,28.2085229 C39.1529337,29.0544216 39.5490027,29.9952899 39.7769836,31 L42,31 L42,35 L39.7769836,35 C39.5490027,36.0047101 39.1529337,36.9455784 38.6199042,37.7914771 L40.1923882,39.363961 L37.363961,42.1923882 L35.7914771,40.6199042 C34.9455784,41.1529337 34.0047101,41.5490027 33,41.7769836 L33,44 L29,44 L29,41.7769836 C27.9952899,41.5490027 27.0544216,41.1529337 26.2085229,40.6199042 L24.636039,42.1923882 L21.8076118,39.363961 L23.3800958,37.7914771 C22.8470663,36.9455784 22.4509973,36.0047101 22.2230164,35 L20,35 L20,31 L22.2230164,31 C22.4509973,29.9952899 22.8470663,29.0544216 23.3800958,28.2085229 Z M31,36 C32.6568542,36 34,34.6568542 34,33 C34,31.3431458 32.6568542,30 31,30 C29.3431458,30 28,31.3431458 28,33 C28,34.6568542 29.3431458,36 31,36 Z"></path> </g> </g></svg>
+          <p class="home"> Settings</p>
+      </div>
+      
+
+      <div class="item1">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="25px" height="25px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <rect x="193.857" y="95.902" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 234.6735 414.1124)" style="fill:#666666;" width="18.49" height="125.104"></rect> <rect x="247.076" y="149.209" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 416.523 489.4382)" style="fill:#666666;" width="125.104" height="18.49"></rect> </g> <circle style="fill:#00ffcc;" cx="256.003" cy="109.907" r="23.458"></circle> <path style="fill:#9AD14B;" d="M485.252,425.551H26.748C11.975,425.551,0,413.575,0,398.803V224.446 c0-14.772,11.975-26.748,26.748-26.748h458.504c14.772,0,26.748,11.975,26.748,26.748v174.358 C512,413.575,500.025,425.551,485.252,425.551z"></path> <g> <path style="fill:#F2F2F2;" d="M302.936,258.544c-5.106,0-9.245,4.139-9.245,9.245v87.671c0,5.106,4.139,9.245,9.245,9.245 c5.106,0,9.245-4.139,9.245-9.245v-87.671C312.181,262.683,308.042,258.544,302.936,258.544z"></path> <path style="fill:#F2F2F2;" d="M256.955,260.125c-4.232-2.856-9.979-1.741-12.835,2.491l-21.92,32.48l-21.92-32.48 c-2.857-4.234-8.603-5.349-12.835-2.491c-4.233,2.856-5.347,8.603-2.491,12.835l26.093,38.664l-26.093,38.664 c-2.856,4.232-1.741,9.979,2.491,12.835c1.585,1.07,3.384,1.583,5.162,1.583c2.97,0,5.886-1.429,7.672-4.075l21.92-32.48 l21.92,32.48c1.786,2.647,4.701,4.075,7.672,4.075c1.779,0,3.577-0.513,5.162-1.583c4.233-2.856,5.347-8.603,2.491-12.835 l-26.093-38.664l26.093-38.664C262.303,268.728,261.188,262.981,256.955,260.125z"></path> <path style="fill:#F2F2F2;" d="M155.679,277.034c5.106,0,9.245-4.139,9.245-9.245c0-5.106-4.139-9.245-9.245-9.245H103.83 c-5.106,0-9.245,4.139-9.245,9.245v87.671c0,5.106,4.139,9.245,9.245,9.245h51.849c5.106,0,9.245-4.139,9.245-9.245 c0-5.106-4.139-9.245-9.245-9.245h-42.604v-24.402h16.679c5.106,0,9.245-4.139,9.245-9.245c0-5.106-4.139-9.245-9.245-9.245 h-16.679v-26.288H155.679z"></path> <path style="fill:#F2F2F2;" d="M408.17,258.544h-63.789c-5.106,0-9.245,4.139-9.245,9.245c0,5.106,4.139,9.245,9.245,9.245h22.649 v78.426c0,5.106,4.139,9.245,9.245,9.245s9.245-4.139,9.245-9.245v-78.426h22.649c5.106,0,9.245-4.139,9.245-9.245 C417.415,262.683,413.276,258.544,408.17,258.544z"></path> </g> </g></svg>
+          <p class="home"> LogOut</p>
+      </div>
+
+
+   <p class="date" id="dateTime"> Today,24 September 2023</p>
+   
+      
+   </nav>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <div id="page-content">
+      
+      
+      
+      
+      
+
+<!-----------------------------------------------------------------------------
+  
+  
+  InfoLay
+  
+----------------------------------------------------------------------------->
+
+
+
+	
+<div class="appCardInfo" id="InfoLay">
+
+              
+
+<div class="cardGale">
+    <div class="cardGale-top">
+        <p class="cardGale__title">Device Query</p>
+        <div class="rating">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M8.51948 1.625C9.1214 1.625 10.0427 4.16625 10.4636 5.43013C10.6014 5.8437 10.9837 6.13054 11.4192 6.14904C12.7373 6.20505 15.375 6.39722 15.375 7.0384C15.375 7.66696 13.5161 9.17543 12.5322 9.92976C12.1816 10.1986 12.0365 10.6604 12.1687 11.082C12.5631 12.34 13.2755 14.8755 12.7573 15.3009C12.2506 15.717 10.2147 14.2326 9.15246 13.4009C8.77021 13.1016 8.22949 13.1012 7.84719 13.4004C6.78473 14.2321 4.75246 15.717 4.28166 15.3009C3.79912 14.8745 4.47615 12.3275 4.84741 11.0727C4.97086 10.6555 4.82425 10.2029 4.47885 9.93826C3.49798 9.18681 1.625 7.66933 1.625 7.0384C1.625 6.3962 4.2711 6.20444 5.5871 6.14878C6.0197 6.13048 6.3998 5.84769 6.53973 5.43793C6.97041 4.17673 7.91633 1.625 8.51948 1.625Z" fill="#00B9AE" stroke="#00B9AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+    </div>
+
+
+
+    <div class="imageLay" id="imageLay">
+    
+    <image class="phoneImage" id="phoneImage" src=""></image>
+    
+    
+    </div>
+
+	
+    
+<div class="MainGale">
+    
+    <p class="mainInfo" id="mainInfo"> <font color=#00ee00> Awaiting query intel... </font> </p>
+    <image class="gif" src="https://media.giphy.com/media/viXmmzsetEf4mmFZsi/giphy.gif?cid=ecf05e47tltk25vflti0xd6vjnbuudbl5yb2dihqdcicfgu6&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="GIF Image"> </image>
+  
+
+</div>
+
+<div class="MoreGale">
+
+     <p class="moreInfo" id="moreInfo">
+
+     </p>
+
+</div>
+    
+    
+    
+    <div class="cardGale__info">
+        <p class="episode__num">46Ep</p>
+        <p class="episode__type">Price:250BWP</p>
+    </div>
+    <div class="cardGale__btns">
+        <button class="add-btnGale">+</button>
+        <button class="watch-btnGale" type="button" onClick="payWhatsapp()">WhatsApp</button>
+    </div>
+	
+    <div class="cardGale__btns">
+        <button class="add-btnGale">+</button>
+        <button class="watch-btnGale" type="button" onClick="payPaypal()">Pay With PayPal</button>
+    </div>
+	<div class="cardGale__btns">
+        <button class="add-btnGale">+</button>
+        <button class="watch-btnGale" type="button" onClick="window.location.href='visaPay.html'">Pay With Credit Card</button>
+    </div>
+    
+    
+	<script>
+            function payWhatsapp(){
+                alert("Contact +26772301926 on WhatsApp to make payment");
+		window.location.href=("https://wa.me/qr/56MT6LWG4FV4L1");
+            }
+		
+            function payPaypal(){
+                window.location.href=("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VY7G3XJJ9QQ9G");
+            }
+        </script>
+</div>
+<p class="nextInfo" id="nextInfo" ><font color=#00ee00> Next </font>font</p>
+<p> <a href="appNewAppAll.html">Go Home</a> </p>
+	  
+  </div><!----cardEnd---->
+    
+          
+
+
+<!-----------------------------------------------------------------------------
+    End Of CardInfo
+  
+----------------------------------------------------------------------------->
+
+
+
+
+
+<!-----------------------------------------------------------------------------
+  
+  
+  MainLay
+  
+----------------------------------------------------------------------------->
+
+<div id="MainLay2">
+     
+     
+     <input class="input" name="text" type="text" placeholder="Search the trackmate...">
+     
+     
+     
+         
+<!------------
+-----Map------>
+     
+      
+    
+    <video class="custom-video" autoplay loop >
+        <source src="video2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    
+    
+<!-------------
+-----Map>------>
+      
+      
+
+    <div class="spanLine"></div>
+       
+  <p class="date" id="dateTime"> version 1.2.7 <font color=#ff0000>Go Pro</p>
+  <p class="support" id="dateTime"> Support: trackmateai@gmail.com</p>
+  <script>
+  
+  
+document.addEventListener("DOMContentLoaded", function() {
+  
+  var datetimeElement = document.getElementById("dateTime");
+
+  function updateDateTime() {
+  
+    var now = new Date();
+
+    var dateTimeString = now.toLocaleString();
+
+    datetimeElement.textContent = dateTimeString+" Today";
+  }
+
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+
+});
+  
+  </script>
+
+
+
+
+  <div class="feedMain">
+  
+  
+  <image class="gif" src="https://media.giphy.com/media/IcZhFmufozDCij3p22/giphy.gif" alt="GIF Image"> </image>
+  
+  
+  
+  <p class="geo" id="ip"> My IP Address: <font color=#ff0000>loading...</font></p>
+  <p class="geo" id="country"> Country: loading...</p>
+  <p class="geo" id="connection"> Geo Name Id: loading...</p>
+  <p class="geo" id="isp"> Connection Type: loading...</p>
+  <p class="geo" id="geoName"> ISP: loading...</p>
+  <p class="geo" id="call"> Calling Code: loading...</p>
+  
+  
+  
+  
+  </div>
+  
+
+
+<div class="loader">
+  <span class="l">R</span>
+  <span class="o">U</span>
+  <span class="a">N</span>
+  <span class="d">N</span>
+  <span class="i">I</span>
+  <span class="n">N</span>
+  <span class="g">G</span>
+  <span class="d1">.</span>
+  <span class="d2">.</span>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+      
+      
+      
+</div><!---Page-Content------>
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+  
+  
+  
+  
+  
+<div class="card3" id="card3">
+  
+  <image class="img" src="data:image/png;base64,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"></image>
+
+  
+  <p class="cookieHeading">Verify Account</p>
+  <p class="cookieDescription"> To ensure the security and validity of your account, we kindly request you to verify it by providing your registered email or username below  <br><a href="#">Privacy Policy</a>.</p>
+
+
+
+        <div class="input-group">
+			<label for="username">Username or Email</label>
+			<input type="email" name="username" id="emailVerify" placeholder="">
+		</div>
+           
+      <button class="proceed" type="button" onClick="feedBack()">Proceed</button>
+           
+        
+</div>
+
+
+
+  
+</div>
+
+
+
+
+
+</div>
+<!-----End Of Main Div----->
+
+
+
+
+
+
+	
+
+<div id="snackbar">New Version Available...</div>
+
+
+<script>
+
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+</script>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Replace 'YOUR_API_KEY' with your actual IPGeolocation.io API key
+      var apiKey = 'bee0da68402b4be28ec8becfa4685317';
+
+      // Fetch the device's IP address from an IP detection service
+      fetch('https://api64.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          var ipAddress = data.ip;
+
+          // Create a new XMLHttpRequest object
+          var xhr = new XMLHttpRequest();
+
+          // Define the API endpoint URL
+          var url = 'https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey + '&ip=' + ipAddress;
+
+          // Prepare the request
+          xhr.open('GET', url, true);
+
+          // Handle the response
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+
+              // Display the response
+              document.getElementById('ip').textContent = response.ip;
+              document.getElementById('country').textContent = "Country: "+response.country_name;
+              document.getElementById('connection').textContent = "Connection: "+response.connection_type;
+              document.getElementById('isp').textContent = "ISP: "+response.isp;
+              document.getElementById('geoName').textContent ="Geo NAme: "+ response.geoname_id;
+              document.getElementById('call').textContent = "Calling Code: "+response.calling_code;
+              
+              
+              var ipElement = document.getElementById('ip');
+              ipElement.textContent = "IP Address: "+ response.ip;
+              ipElement.style.color = 'red';
+              
+            }
+          };
+
+          // Send the request
+          xhr.send();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    });
+
+
+
+
+function premium(){
+    
+    var email = document.getElementById("username").value;
+
+    alert("You are not premium");
+	
+    if(email=="gnkisa31@gmail.com"){
+        window.confirm("Failed to load tracking resources!Your device may not support some features,please consider upgrading to a capable device");
+    }
+}
+
+
+	  
+  </script>
+  
+  
+  <script>
+      function hackerVersion(){
+            window.location.href=("https://trackmate-ai.github.io/Main/liteSplash");
+      }  
+  </script>
+  
+
+
+
+</body>
+</html>
