@@ -43,11 +43,20 @@ function feedBack(){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
+if (username=="olesitse.rapgang@gmail.com"){
+           phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a04s.jpg";
+    
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 350026553995136</font><br/>  Model: Galaxy A04S(SM-A047F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=("  Model Info: MOBILE SM-A047F/DS BLACK SKZ<br/>Search Term: 350026553995136<br/>IMEI 1: 350026553995136<br/>IMEI 2: 350133373995138<br/>Serial Number: R58TC04FQ9J<br/>Model Desc: Galaxy A04s<br/>Model Name: SM-A047F/DS<br/>Model Number: SM-A047FZKDSKZ<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 01-12-2024<br/>Production location: Korea SEC<br/>Production Date: 01-12-2022 ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
+
+    
  if (username=="neoboy71@gmail.com"){
             window.location.href=("resultsNeoboy86519.html");
-   }
-if (username=="seeletsotuduetso@gmail.com"){
-            window.location.href=("resultsSeeletso35709.html");
    }
     
 
