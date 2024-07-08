@@ -45,7 +45,9 @@ if (username=="tmotlhaleemang@gmail.com"){
         moreInfo.style.display=("block");
    }
 
-    
+    if (username=="ashrafprofessor30@gmail.com"){
+           alert("Invalid IMEi number-35749877051369");
+   }
 
 
 
