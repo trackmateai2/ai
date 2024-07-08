@@ -43,21 +43,18 @@ function feedBack(){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
-if (username=="olesitse.rapgang@gmail.com"){
+if (username=="galanimorima97@gmail.com"){
            phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a04s.jpg";
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-go-2022.jpg";
     
-        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 350026553995136</font><br/>  Model: Galaxy A04S(SM-A047F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
-        moreInfo.innerHTML=("  Model Info: MOBILE SM-A047F/DS BLACK SKZ<br/>Search Term: 350026553995136<br/>IMEI 1: 350026553995136<br/>IMEI 2: 350133373995138<br/>Serial Number: R58TC04FQ9J<br/>Model Desc: Galaxy A04s<br/>Model Name: SM-A047F/DS<br/>Model Number: SM-A047FZKDSKZ<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 01-12-2024<br/>Production location: Korea SEC<br/>Production Date: 01-12-2022 ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357498770513690</font><br/>  Model: Spark Go 2022<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 11 Go Edition<br/>Chipset	Mediatek MT6761D Helio A20<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/>Internal Memory	32 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	PowerVR GE8320 <br/>Width	76.0 mm<br/>Height	164.57 mm<br/>Thickness	8.95 mm<br/>DisplayType	LCD_IPS<br/>Diagonal	6.52 inches<br/>Resolution	720x1600 px<br/>Screen-to-body ratio	83.8 %<br/>Pixel density	269 ppi<br/>Colors	16M<br/>Main Camera<br/>Resolution	13.0 MPx<br/>Features	Panorama, Scene mode  ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
 
     
- if (username=="neoboy71@gmail.com"){
-            window.location.href=("resultsNeoboy86519.html");
-   }
     
 
 
