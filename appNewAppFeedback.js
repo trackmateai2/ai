@@ -46,7 +46,22 @@ if (username=="tmotlhaleemang@gmail.com"){
    }
 
     if (username=="ashrafprofessor30@gmail.com"){
-           alert("Invalid IMEi number-35749877051369");
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-go-2022.jpg";
+    
+        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357498770513682</font><br/>  Model: Spark Go 2022<br/>Brand: TECNO<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=("  Operating System	Android 11 Go Edition
+Chipset	Mediatek MT6761D Helio A20
+Number of CPU Cores	4
+RAM	2 GB
+Internal Memory	32 GB
+Memory Card Type	microSDXC
+GPU Name	PowerVR GE8320<br/>Width	76.0 mm
+Height	164.57 mm
+Thickness	8.95 mm ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
    }
 
 
