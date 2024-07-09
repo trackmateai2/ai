@@ -47,10 +47,10 @@ if (username=="tmotlhaleemang@gmail.com"){
 
     if (username=="ashrafprofessor30@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-go-2022.jpg";
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-x.jpg";
     
-        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357498770513682</font><br/>  Model: Spark Go 2022<br/>Brand: TECNO<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
-        moreInfo.innerHTML=("  Operating System	Android 11 Go EditionChipset	Mediatek MT6761D Helio A20Number of CPU Cores	4<br/>RAM	2 GB<br/>Internal Memory	32 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	PowerVR GE8320<br/>Width	76.0 mm<br/>Height	164.57 mm<br/>Thickness	8.95 mm ");
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 353051097790287</font><br/>  Model: iPhone X(A1865)<br/>Brand: APPLE <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=("Operating System	iOS<br/>Chipset	Apple A11 Bionic APL1W72<br/>Number of CPU Cores	6<br/>RAM	3 GB<br/> Width	70.9 mm<br/>Height	143.6 mm<br/>Thickness	7.7 mm<br/>Weight	174.0 g<br/>DisplayType	OLED<br/>Diagonal	5.8 inches<br/>Resolution	1125x2436 px<br/>Screen-to-body ratio	81.1 %<br/>Pixel density	463 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch  ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
@@ -95,6 +95,11 @@ if (username=="tmotlhaleemang@gmail.com"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
+
+
+
+
+
 
     
     /*
