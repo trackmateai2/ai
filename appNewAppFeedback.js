@@ -85,7 +85,16 @@ if (username=="saduknaro@gmail.com"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
-
+if (username=="tmotlhaleemang@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg";
+    
+        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 355317932760894</font><br/>  Model: iPhone 13(A2633)<br/>Brand: APPLE <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	iOS 17<br/>Chipset	Apple A15 Bionic<br/>Number of CPU Cores	6<br/>RAM	6 GB<br/> Width	71.5 mm<br/>Height	146.7 mm<br/>Thickness	7.7 mm<br/>Weight	174.0 g<br/> DisplayType	RETINADiagonal	6.1 inches<br/>Resolution	1170x2532 px<br/>Pixel density	457 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
 
     
     /*
