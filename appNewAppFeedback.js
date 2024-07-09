@@ -55,6 +55,16 @@ if (username=="tmotlhaleemang@gmail.com"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
+ if (username=="neoboy71@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-5g-r.jpg";
+    
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 353306240000293</font><br/>  Model: Galaxy S21(SM-G991B)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=("  Operating System	Android 11<br/>Chipset	Samsung Exynos 2000<br/>Number of CPU Cores	1<br/>RAM	8 GB<br/>Width	71.2 mm<br/>Height	151.7 mm<br/>Thickness	7.9 mm<br/>Weight	171.0 g<br/> DisplayType	AMOLED<br/>Diagonal	6.2 inches<br/>Resolution	1080x2400 px<br/>Screen-to-body ratio	85.7 %<br/>Pixel density	398 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
 
 
 
