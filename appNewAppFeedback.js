@@ -22,12 +22,12 @@ function feedBack(){
 
    
  
-if (username=="galanimorima97@gmail.com"){
+if (username=="pdimbungu@gmail.com"){
            phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-go-2022.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/o/J/tDHpQW-d.jpg";
     
-        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357498770513690</font><br/>  Model: Spark Go 2022<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
-        moreInfo.innerHTML=(" Operating System	Android 11 Go Edition<br/>Chipset	Mediatek MT6761D Helio A20<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/>Internal Memory	32 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	PowerVR GE8320 <br/>Width	76.0 mm<br/>Height	164.57 mm<br/>Thickness	8.95 mm<br/>DisplayType	LCD_IPS<br/>Diagonal	6.52 inches<br/>Resolution	720x1600 px<br/>Screen-to-body ratio	83.8 %<br/>Pixel density	269 ppi<br/>Colors	16M<br/>Main Camera<br/>Resolution	13.0 MPx<br/>Features	Panorama, Scene mode  ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 867722052231876</font><br/>  Model: nova 9 SE(JLN-LX1)<br/>Brand: HUAWEI <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 11<br/>Chipset	Qualcomm SDM665 Snapdragon 665<br/>Number of CPU Cores	2<br/>RAM	8 GB<br/>Width	75.6 mm<br/>Height	164.7 mm<br/>Thickness	8.0 mm<br/>Weight	191.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.78 inches<br/>Resolution	1080x2388 px<br/>Screen-to-body ratio	89.4 %<br/>Pixel density	387 ppi<br/>Colors	16M<br/>Other display Features	, 120Hz  ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
