@@ -56,14 +56,7 @@ if (username=="kagisotrucker@gmail.com"){
    }
 
 if (username=="tidimalotshwenyego@gmail.com"){
-            phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg";
-    
-        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 358592891900221</font><br/>  Model: iPhone 13 Pro Max(A2644)<br/>Brand: APPLE <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=(" Operating System	iOS 17<br/>Chipset	Apple A15 Bionic<br/>Number of CPU Cores	6<br/>RAM	6 GB<br/>Width	78.1 mm<br/>Height	160.8 mm<br/>Thickness	7.7 mm<br/>Weight	240.0 g<br/>DisplayType	RETINA<br/>Diagonal	6.7 inches<br/>Resolution	1284x2778 px<br/>Screen-to-body ratio	87.4 %<br/>Pixel density	457 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch, Scratch resistant ");
-        
-        mainInfo.style.display=("block");
-        moreInfo.style.display=("block");
+            window.location.href=("resultsTidimalo.html");
    }
 
 if (username=="neoboy71@gmail.com"){
