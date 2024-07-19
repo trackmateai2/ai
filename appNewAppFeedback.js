@@ -33,6 +33,16 @@ if (username=="keitiretsesamuel@gmail.com"){
         moreInfo.style.display=("block");
    }
 
+if (username=="faithisang21@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/x/9/Eq3lPN-d.jpg";
+    
+        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 350584181491910</font><br/>  Model: Galaxy A05(SM-A055F)<br/>Brand: SAMSUNG <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=("Model Info: MOBILE SM-A055F/DS BLACK XID<br/>Search Term: 350584181491910<br/>IMEI 1: 350584181491910<br/>Serial Number: R9CX401MVAM<br/>Model Desc: Galaxy A05<br/>Model Name: SM-A055F/DS<br/>Model Number: SM-A055FZKDXID<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 17-04-2026<br/>Production location: Korea SEC<br/>Production Date: 17-04-2024<br/>Country: Botswana<br/>Carrier: Factory Unlocked  ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
 
 
 
