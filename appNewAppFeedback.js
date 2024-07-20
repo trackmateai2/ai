@@ -61,10 +61,10 @@ if (username=="tidimalotshwenyego@gmail.com"){
 
 if (username=="neoboy71@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/k/O/MCpIfl-d.jpg";
     
-        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 356688115304760</font><br/>  Model: iPhone 12 Pro(A2406)<br/>Brand: APPLE <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
-        moreInfo.innerHTML=("Operating System	iOS 17<br/>Chipset	Apple A14 Bionic<br/>Number of CPU Cores	6<br/>RAM	6 GB<br/>Width	71.5 mm<br/>Height	146.7 mm<br/>Thickness	7.4 mm<br/>Weight	189.0 g <br/>DisplayType	OLED<br/>Diagonal	6.1 inches<br/>Resolution	1170x2532 px<br/>Pixel density	457 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 354916449393783</font><br/>  Model: Galaxy A24(SM-A245F)<br/>Brand: SAMSUNG <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=("Model Info: MOBILE SM-A245F/DSN AFA<br/>Search Term: 354916449393783<br/>IMEI 1: 354916449393783<br/>Serial Number: RZ8W80BH11A<br/>Model Desc: Galaxy A24<br/>Model Name: SM-A245F/DSN<br/>Model Number: SM-A245FLGUAFA<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 17-08-2025<br/>Production location: Brazil SEDA<br/>Production Date: 17-08-2023<br/>Country: Botswana<br/>Carrier: Factory Unlocked  ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
