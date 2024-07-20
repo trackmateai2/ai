@@ -80,7 +80,16 @@ if (username=="ashrafprofessor30@gmail.com"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
-
+if (username=="karabopelekekae@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/7/m/zJRkRf-d.jpg";
+    
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 865198054428954</font><br/>  Model: Y7a(PPA-LX2) <br/>Brand: HUAWEI <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=(" Operating System	Android 10<br/>Chipset	Huawei HiSilicon KIRIN 710A<br/>Number of CPU Cores	4<br/>RAM	4 GB<br/>Width	76.88 mm<br/>Height	165.65 mm<br/>Thickness	9.26 mm<br/>Weight	206.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.67 inches<br/>Resolution	1080x2400 px<br/>Screen-to-body ratio	84.4 %<br/>Pixel density	395 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch  ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
     
     
     /*
