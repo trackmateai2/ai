@@ -90,7 +90,17 @@ if (username=="karabopelekekae@gmail.com"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
+  
+if (username=="tavongatichagwa0@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7r4.jpg";
     
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 358685094773260</font><br/>  Model: iPhone 7(A1778) <br/>Brand: APPLE <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>   ");
+        moreInfo.innerHTML=(" Operating System	iOS<br/>Chipset	Apple A10 Fusion APL1W24<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/>Width	67.1 mm<br/>Height	138.3 mm<br/>Thickness	7.1 mm<br/>Weight	138.0 g<br/>DisplayType	RETINA<br/>Diagonal	4.7 inches<br/>Resolution	750x1334 px<br/>Screen-to-body ratio	65.6 %<br/>Pixel density	326 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch  ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }  
     
     /*
    if (username=="gofiwaseabelo99@gmail.com"){
