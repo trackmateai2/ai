@@ -70,7 +70,16 @@ if (username=="neoboy71@gmail.com"){
         moreInfo.style.display=("block");
    }
 
-
+if (username=="ashrafprofessor30@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/x/h/HbJQI8-d.jpg";
+    
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 359603237766280</font><br/>  Model: Spark 10 5G<br/>Brand: TECNO<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=("Operating System	Android 13<br/>Chipset	Mediatek Dimensity 6020<br/>Number of CPU Cores	2<br/>RAM	4 GB<br/>Internal Memory	64 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	Mali-G57 MC2<br/> Width	75.45 mm<br/>Height	164.37 mm<br/>Thickness	8.4 mm<br/>Weight	202.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.6 inches<br/>Resolution	720x1612 px<br/>Pixel density	267 ppi<br/>Colors	16M<br/>Other display Features	, Display refresh rate: 90 Hz ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
 
     
     
