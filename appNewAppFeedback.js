@@ -48,10 +48,10 @@ if (username=="gofiwaseabelo99@gmail.com"){
    }  
  if (username=="ashrafprofessor30@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/X/H/BpkjP1-d.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/P/r/tIM5C5-d.jpg";
     
-        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 359696715478428</font><br/>  Model: Pop 7 Pro<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=(" Operating System	Android 12<br/>Chipset	Mediatek MT6761V Helio A22<br/>Number of CPU Cores	4<br/>RAM	3 GB<br/> Width	75.5 mm<br/>Height	163.9 mm<br/>Thickness	8.9 mm<br/>Weight	191.0 g <br/>DisplayType	LCD_IPS<br/>Diagonal	6.56 inches<br/>Resolution	720x1600 px<br/>Screen-to-body ratio	83.5 %<br/>Pixel density	267 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch  ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 350320364777688</font><br/>  Model: Galaxy A54(SM-A546E)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 13<br/>Chipset	Exynos 1380<br/>Number of CPU Cores	4<br/>RAM	4 GB<br/> Width	76.7 mm<br/>Height	158.2 mm<br/>Thickness	8.2 mm<br/>Weight	202.0 g<br/> DisplayType	SUPER_AMOLED<br/>Diagonal	6.4 inches<br/>Resolution	1080x2340 px<br/>Screen-to-body ratio	82.9 %<br/>Pixel density	403 ppi<br/>Colors	16M<br/>Other display Features	, Display refresh rate: 120Hz");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
