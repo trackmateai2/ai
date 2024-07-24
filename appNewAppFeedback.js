@@ -66,6 +66,17 @@ if (username=="gofiwaseabelo99@gmail.com"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }  
+     if (username=="neoboy71@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg";
+    
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 356296326074733</font><br/>  Model: iPhone 14(A2649)<br/>Brand: APPLE <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=(" Model Region: United States<br/>SIM Card: Dual eSIM only<br/>Activation Status: Activated<br/>Warranty Status: Apple Limited Warranty<br/>Coverage Start Date: 28 Feb 2024<br/>Estimated Purchase Date: 28 Feb 2024<br/>Telephone Technical Support: Active<br/>Repairs and Service Coverage: Active<br/>Warranty Expiration Date: 27 Feb 2025<br/>Warranty Expires in: 218 days<br/>AppleCare Eligible: No<br/>Valid Purchase Date: Yes<br/>Registered Device: Yes<br/>Replaced Device: No<br/>Loaner Device: No<br/>Carrier/SimLock Info: Hidden<br/>iPhone 14 (A2649)<br/>IMEI: 356296326074733<br/>Find My iPhone: ON<br/>iCloud Status: Lost Mode ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }  
+
     
     /*
    if (username=="gofiwaseabelo99@gmail.com"){
