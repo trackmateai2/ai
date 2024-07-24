@@ -48,10 +48,10 @@ if (username=="gofiwaseabelo99@gmail.com"){
    }  
  if (username=="ashrafprofessor30@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/x/9/Eq3lPN-d.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/P/r/tIM5C5-d.jpg";
     
-        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 358791571875170</font><br/>  Model: Galaxy A05(SM-A055F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=("Model Info: MOBILE SM-A055F/DS _HHP<br/>Search Term: 358791571875170<br/>IMEI 1: 358791571875170<br/>Serial Number: R92X5347MHR<br/>Model Desc: Galaxy A05<br/>Model Name: SM-A055F/DS<br/>Model Number: UNKNOWN HHP_HHP<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 31-07-2027<br/>Production location: Korea SEC<br/>Estimated Production Date: 31-07-2025 ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 350320364777688</font><br/>  Model: Galaxy A54(SM-A546E)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" <br/>Model Info: MOBILE SM-A546E/DS BLACK MEA<br/>Search Term: 350320364777688<br/>IMEI 1: 350320364777688<br/>IMEI 2: 350768454777689<br/>Serial Number: R5CW33AEKJL<br/>Model Desc: Galaxy A54 5g<br/>Model Name: SM-A546E/DS<br/>Model Number: SM-A546EZKCMEA<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 28-03-2025<br/>Production location: Korea SEC<br/>Production Date: 28-03-2023 ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
