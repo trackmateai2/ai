@@ -48,10 +48,10 @@ if (username=="gofiwaseabelo99@gmail.com"){
    }  
  if (username=="ashrafprofessor30@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/P/r/tIM5C5-d.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/x/9/Eq3lPN-d.jpg";
     
-        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 350320364777688</font><br/>  Model: Galaxy A54(SM-A546E)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
-        moreInfo.innerHTML=(" Operating System	Android 13<br/>Chipset	Exynos 1380<br/>Number of CPU Cores	4<br/>RAM	4 GB<br/> Width	76.7 mm<br/>Height	158.2 mm<br/>Thickness	8.2 mm<br/>Weight	202.0 g<br/> DisplayType	SUPER_AMOLED<br/>Diagonal	6.4 inches<br/>Resolution	1080x2340 px<br/>Screen-to-body ratio	82.9 %<br/>Pixel density	403 ppi<br/>Colors	16M<br/>Other display Features	, Display refresh rate: 120Hz");
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 358791571875170</font><br/>  Model: Galaxy A05(SM-A055F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=("Model Info: MOBILE SM-A055F/DS _HHP<br/>Search Term: 358791571875170<br/>IMEI 1: 358791571875170<br/>Serial Number: R92X5347MHR<br/>Model Desc: Galaxy A05<br/>Model Name: SM-A055F/DS<br/>Model Number: UNKNOWN HHP_HHP<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 31-07-2027<br/>Production location: Korea SEC<br/>Estimated Production Date: 31-07-2025 ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
