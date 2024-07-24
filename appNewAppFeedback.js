@@ -68,14 +68,21 @@ if (username=="gofiwaseabelo99@gmail.com"){
    }  
      if (username=="neoboy71@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg";
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/oppo-a16.jpg";
     
-        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 356296326074733</font><br/>  Model: iPhone 14(A2649)<br/>Brand: APPLE <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=(" Model Region: United States<br/>SIM Card: Dual eSIM only<br/>Activation Status: Activated<br/>Warranty Status: Apple Limited Warranty<br/>Coverage Start Date: 28 Feb 2024<br/>Estimated Purchase Date: 28 Feb 2024<br/>Telephone Technical Support: Active<br/>Repairs and Service Coverage: Active<br/>Warranty Expiration Date: 27 Feb 2025<br/>Warranty Expires in: 218 days<br/>AppleCare Eligible: No<br/>Valid Purchase Date: Yes<br/>Registered Device: Yes<br/>Replaced Device: No<br/>Loaner Device: No<br/>Carrier/SimLock Info: Hidden<br/>iPhone 14 (A2649)<br/>IMEI: 356296326074733<br/>Find My iPhone: ON<br/>iCloud Status: Lost Mode ");
+        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 867556064788881</font><br/>  Model: OPPO A16(CPH2269)<br/>Brand: OPPO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=(" Operating System	Android 11<br/>Chipset	MediaTek Helio G35<br/>Number of CPU Cores	4<br/>RAM	4 GB<br/>Internal Memory	64 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	IMG PowerVR GE8320<br/>GPU Clock	680.0 MHz<br/> Width	75.6 mm<br/>Height	163.88 mm<br/>Thickness	8.4 mm<br/>Weight	190.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.52 inches<br/>Resolution	720x1600 px<br/>Screen-to-body ratio	83.0 %<br/>Pixel density	269 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }  
+
+
+
+
+
+
+
 
     
     /*
