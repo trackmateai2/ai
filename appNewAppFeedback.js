@@ -68,10 +68,10 @@ if (username=="gofiwaseabelo99@gmail.com"){
    }  
      if (username=="neoboy71@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/oppo-a16.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/J/b/Cky5Wt-d.jpg";
     
-        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 867556064788881</font><br/>  Model: OPPO A16(CPH2269)<br/>Brand: OPPO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=(" Operating System	Android 11<br/>Chipset	MediaTek Helio G35<br/>Number of CPU Cores	4<br/>RAM	4 GB<br/>Internal Memory	64 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	IMG PowerVR GE8320<br/>GPU Clock	680.0 MHz<br/> Width	75.6 mm<br/>Height	163.88 mm<br/>Thickness	8.4 mm<br/>Weight	190.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.52 inches<br/>Resolution	720x1600 px<br/>Screen-to-body ratio	83.0 %<br/>Pixel density	269 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch ");
+        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357777964837340</font><br/>  Model: Pop 7<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=("Operating System	Android 12<br/>Chipset	Unisoc SC9863A1<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/>Internal Memory	64 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	PowerVR GE832<br/>Width	75.5 mm<br/>Height	163.9 mm<br/>Thickness	8.9 mm<br/> DisplayType	LCD_IPS<br/>Diagonal	6.6 inches<br/>Resolution	720x1612 px<br/>Screen-to-body ratio	84.6 %<br/>Pixel density	267 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch  ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
