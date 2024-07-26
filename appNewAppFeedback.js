@@ -76,7 +76,9 @@ if (username=="gofiwaseabelo99@gmail.com"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }  
-
+     if (username=="gmasele15@gmail.com"){
+          window.location.href=(resultsGalemasele.html);
+     }
 
 
 
