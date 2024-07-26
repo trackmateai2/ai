@@ -68,10 +68,10 @@ if (username=="gofiwaseabelo99@gmail.com"){
    }  
      if (username=="neoboy71@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/J/b/Cky5Wt-d.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/H/r/WnrQfJ-d.jpg";
     
-        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357777964837340</font><br/>  Model: Pop 7<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
-        moreInfo.innerHTML=("Operating System	Android 12<br/>Chipset	Unisoc SC9863A1<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/>Internal Memory	64 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	PowerVR GE832<br/>Width	75.5 mm<br/>Height	163.9 mm<br/>Thickness	8.9 mm<br/> DisplayType	LCD_IPS<br/>Diagonal	6.6 inches<br/>Resolution	720x1612 px<br/>Screen-to-body ratio	84.6 %<br/>Pixel density	267 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch  ");
+        mainInfo.innerHTML=("  STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 860639047962901</font><br/>  Model: Y5 (2019)(AMN-LX9)<br/>Brand: HUAWEI <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 9.0 Pie<br/>Chipset	MediaTek Helio A22 (MT6761)<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/> Width	70.78 mm<br/>Height	147.13 mm<br/>Thickness	8.45 mm<br/>Weight	146.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	5.71 inches<br/>Resolution	720x1520 px<br/>Screen-to-body ratio	78.0 %<br/>Pixel density	295 ppi<br/>Other display Features	Multi-touch");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
