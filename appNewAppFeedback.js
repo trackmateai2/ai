@@ -59,10 +59,10 @@ if (username=="gofiwaseabelo99@gmail.com"){
   
      if (username=="neoboy71@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xr-new.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/J/b/Cky5Wt-d.jpg";
     
-        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357390092072499</font><br/>  Model: iPhone Xr(A2108)<br/>Brand: Apple<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana");
-        moreInfo.innerHTML=(" Operating System	iOS 17<br/>Chipset	Apple A12 Bionic<br/>Number of CPU Cores	6<br/>RAM	3 GB <br/>Width	75.7 mm<br/>Height	150.9 mm<br/>Thickness	8.3 mm<br/>Weight	194.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.1 inches<br/>Resolution	828x1792 px<br/>Screen-to-body ratio	80.1 %<br/>Pixel density	324 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357777964837340</font><br/>  Model: Pop 7<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 12<br/>Chipset	Unisoc SC9863A1<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/>Internal Memory	64 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	PowerVR GE832<br/> DisplayType	LCD_IPS<br/>Diagonal	6.6 inches<br/>Resolution	720x1612 px<br/>Screen-to-body ratio	84.6 %<br/>Pixel density	267 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
