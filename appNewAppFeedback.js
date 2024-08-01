@@ -29,7 +29,9 @@ function feedBack(){
  if (username=="thgaothuse@gmail.com"){
            window.location.href("results72810.html");
    }  
-  
+  if (username=="mosimanegapekgausa@gmail.com"){
+           window.location.href("results72810.html");
+   }  
     
 
 
