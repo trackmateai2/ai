@@ -19,7 +19,7 @@ function disclaimer(){
 function privacyPolicy(){
     window.location.href=("privacyPolicy.html");
 }
-function feedBack(){
+function feedBackkk(){
        
        var username= document.getElementById("username").value;
        var myMainLay = document.getElementById("MainLay2");
@@ -43,7 +43,11 @@ function feedBack(){
      
 }
 
+function feedBack(){
 
+     alert("New Alert");
+
+}
 
 
 
