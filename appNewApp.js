@@ -33,7 +33,8 @@ function feedBack(){
                 phoneImageLay= document.getElementById("imageLay");
                 phoneImage= document.getElementById("phoneImage");
 
-            
+             mainInfo.innerHTML=(" test1 ");
+             mainInfo.style.display=("block");
      
 }
 
