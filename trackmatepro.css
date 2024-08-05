@@ -5,13 +5,13 @@ body
 }
 
 .MainLay{
- display: none;
+ display: block;
 }
 .InfoLay{
     display: none;
 }
 .LoginLay{
-    display: block;
+    display: none;
 }
 
 
@@ -507,6 +507,7 @@ body
   padding-inline: 0.5em;
   padding-block: 0.7em;
   border: none;
+  font-family: "Rajdhani", sans-serif; 
 }
 /* styling of animated border */
 .form:before {
@@ -568,6 +569,7 @@ input:not(:placeholder-shown) ~ .reset {
   cursor: pointer;
   background-color: #7d2ae8;
   transition: all 0.2s ease;
+  font-family: "Rajdhani", sans-serif; 
 }
 
 .button2:active {
@@ -666,6 +668,7 @@ input:not(:placeholder-shown) ~ .reset {
   justify-content: space-around;
   width: 200px;
   margin-left: 18%;
+  font-family: "Rajdhani", sans-serif; 
 }
 
 .container .btn {
