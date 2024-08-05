@@ -20,7 +20,8 @@ function privacyPolicy(){
     window.location.href=("privacyPolicy.html");
 }
 function feedBack(){
-    
+       
+       var username= document.getElementById("username").value;
        var myMainLay = document.getElementById("MainLay2");
        var myInfoLay = document.getElementById("InfoLay");
 
