@@ -48,7 +48,7 @@ function feedBack(){
 let person = prompt("Verify your account", "example@gmail.com");
  
  if (person != null) {
-    alert("Hello " + person + "thisis a test");
+    alert("Hello " + person + " this is a test");
   }
 
 }
