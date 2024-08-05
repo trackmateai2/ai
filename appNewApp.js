@@ -33,7 +33,8 @@ function feedBack(){
                 phoneImageLay= document.getElementById("imageLay");
                 phoneImage= document.getElementById("phoneImage");
 
-     
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/Q/9/B5fkgh-d.jpg";
      
 }
 
