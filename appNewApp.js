@@ -19,7 +19,9 @@ function disclaimer(){
 function privacyPolicy(){
     window.location.href=("privacyPolicy.html");
 }
-
+function feedBack(){
+    alert("Maselegale");
+}
 
 
 
