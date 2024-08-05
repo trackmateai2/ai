@@ -45,7 +45,12 @@ function feedBackkk(){
 
 function feedBack(){
 
-     alert("New Alert");
+let person = prompt("Verify your account", "example@gmail.com");
+ 
+ if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "thisis a test";
+  }
 
 }
 
