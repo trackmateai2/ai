@@ -20,8 +20,21 @@ function privacyPolicy(){
     window.location.href=("privacyPolicy.html");
 }
 function feedBack(){
-    alert("Maselegale");
+    var myMainLay = document.getElementById("MainLay2");
+    var myInfoLay = document.getElementById("InfoLay");
+
+            myMainLay.style.display=("none");
+            myInfoLay.style.display=("block");
+     
 }
+
+
+
+
+
+
+
+
 
 
 
