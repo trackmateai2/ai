@@ -5,13 +5,13 @@ body
 }
 
 .MainLay{
- display: block;
+ display: none;
 }
 .InfoLay{
     display: none;
 }
 .LoginLay{
-    display: none;
+    display: block;
 }
 
 
