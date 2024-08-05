@@ -34,7 +34,7 @@ function feedBack(){
                 phoneImage= document.getElementById("phoneImage");
 
              mainInfo.style.display=("block");
-     
+     alert(username);
 }
 
 
