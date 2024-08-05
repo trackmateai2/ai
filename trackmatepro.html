@@ -1,0 +1,337 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <Link rel="stylesheet" href="trackmatepro.css">
+    <Link rel="stylesheet" href="loginPro.css">
+    <Link rel="stylesheet" href="resultsPro.css">
+    <script src='loginFirebase.js'></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+    </style>
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+<!---------------
+login
+---------------->
+
+<div class="LoginLay">
+
+<div class="loader" id="robot">
+  <div class="modelViewPort">
+    <div class="eva">
+      <div class="head">
+        <div class="eyeChamber">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="hand"></div>
+        <div class="hand"></div>
+        <div class="scannerThing"></div>
+        <div class="scannerOrigin"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class=tittle> TrackMate Ai</p>
+<p class=tittle2> AI Powered</p>
+    
+<form class="formTwit">
+    <label for="search">
+        <input class="input" type="text" required="" placeholder="Input username" id="username">
+        <div class="fancy-bg"></div>
+    </label>
+</form>
+  <form class="formTwit" id="formTwit2">
+    <label for="search">
+        <input class="input" type="text" required="" placeholder="Input password" id="passwordIn">
+        <div class="fancy-bg"></div>
+    </label>
+</form> 
+
+<button class="custom-btn btn-1" onClick="signInFirebase()"> Sign In </button>
+
+</div>
+<!---------------
+login_End
+---------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------
+Start
+
+----------------------->
+<div class="MainLay">
+
+
+
+
+
+<div class="loader">
+  <div class="modelViewPort">
+    <div class="eva">
+      <div class="head">
+        <div class="eyeChamber">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="hand"></div>
+        <div class="hand"></div>
+        <div class="scannerThing"></div>
+        <div class="scannerOrigin"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<p class=tittle> TrackMate Ai</p>
+<p class=tittle2> AI Powered</p>
+
+
+
+<div class="hacker-loader">
+  <div class="loader-text">
+    <span data-text="Initializing..." class="text-glitch">Awaiting Query...</span>
+  </div>
+  <div class="loader-bar">
+    <div class="bar-fill"></div>
+    <div class="bar-glitch"></div>
+  </div>
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  
+  <form class="form" id="form">
+      <button>
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+              <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+      </button>
+      <input class="input" placeholder="Input IMEi number" required="" type="text">
+      <button class="reset" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
+  </form>
+   <form class="form">
+      <button>
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+              <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+      </button>
+      <input class="input" placeholder="Last known location" required="" type="text">
+      <button class="reset" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
+  </form>
+  <form class="form">
+      <button>
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+              <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+      </button>
+      <input class="input" placeholder="Verify account email" required="" type="text">
+      <button class="reset" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
+  </form>
+ 
+  
+       <button class="button2">
+          Locate Device
+       </button>
+       
+       <div class="container">
+           <div class="btn"><a href="#">Results</a></div>
+       </div>
+
+  
+  
+</div>
+
+
+</div><!--->
+<!----------------------
+ End
+
+----------------------->
+
+
+
+
+
+
+
+<!----------------------
+ Start
+----------------------->
+<div class="InfoLay">
+	
+	
+	
+	
+<div class="loader">
+  <div class="modelViewPort">
+    <div class="eva">
+      <div class="head">
+        <div class="eyeChamber">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="hand"></div>
+        <div class="hand"></div>
+        <div class="scannerThing"></div>
+        <div class="scannerOrigin"></div>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+<p class=tittle> TrackMate Ai</p>
+<p class=tittle2> AI Powered</p>
+
+
+	
+	
+<div class="appCardInfo" id="InfoLay">
+
+              
+
+<div class="cardGale">
+    <div class="cardGale-top">
+        <p class="cardGale__title">Device Query</p>
+        <div class="rating">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M8.51948 1.625C9.1214 1.625 10.0427 4.16625 10.4636 5.43013C10.6014 5.8437 10.9837 6.13054 11.4192 6.14904C12.7373 6.20505 15.375 6.39722 15.375 7.0384C15.375 7.66696 13.5161 9.17543 12.5322 9.92976C12.1816 10.1986 12.0365 10.6604 12.1687 11.082C12.5631 12.34 13.2755 14.8755 12.7573 15.3009C12.2506 15.717 10.2147 14.2326 9.15246 13.4009C8.77021 13.1016 8.22949 13.1012 7.84719 13.4004C6.78473 14.2321 4.75246 15.717 4.28166 15.3009C3.79912 14.8745 4.47615 12.3275 4.84741 11.0727C4.97086 10.6555 4.82425 10.2029 4.47885 9.93826C3.49798 9.18681 1.625 7.66933 1.625 7.0384C1.625 6.3962 4.2711 6.20444 5.5871 6.14878C6.0197 6.13048 6.3998 5.84769 6.53973 5.43793C6.97041 4.17673 7.91633 1.625 8.51948 1.625Z" fill="#00B9AE" stroke="#00B9AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+    </div>
+
+
+
+    <div class="imageLay" id="imageLay">
+    
+    <image class="phoneImage" id="phoneImage" src=""></image>
+    
+    
+    </div>
+
+	
+    
+<div class="MainGale">
+    
+    <p class="mainInfo" id="mainInfo"> <font color=#00ee00> Awaiting query intel... </font> </p>
+    <image class="gif" src="https://media.giphy.com/media/viXmmzsetEf4mmFZsi/giphy.gif?cid=ecf05e47tltk25vflti0xd6vjnbuudbl5yb2dihqdcicfgu6&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="GIF Image"> </image>
+  
+
+</div>
+
+<div class="MoreGale">
+
+     <p class="moreInfo" id="moreInfo">
+
+     </p>
+
+</div>
+    
+    
+    
+    <div class="cardGale__info">
+        <p class="episode__num">46Ep</p>
+        <p class="episode__type">Price:250BWP/19USD</p>
+    </div>
+    <div class="cardGale__btns">
+        <button class="add-btnGale">+</button>
+        <button class="watch-btnGale" type="button" onClick="payWhatsapp()">Pay Through Support</button>
+    </div>
+	
+    <div class="cardGale__btns">
+        <button class="add-btnGale">+</button>
+        <button class="watch-btnGale" type="button" onClick="payPaypal()">Pay With PayPal</button>
+    </div>
+	
+    
+    
+	<script>
+            function payWhatsapp(){
+                alert("Email to trackmateai@gmail.com to make payment");
+		window.location.href=("https://www.mail.google.com/");
+            }
+		
+            function payPaypal(){
+                window.location.href=("https://paypal.me/trackmateai");
+            }
+        </script>
+</div>
+
+	  
+</div><!----cardEnd---->
+    
+        
+
+
+
+</div>
+<!----------------------
+ End
+
+----------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </body>
+</html>
