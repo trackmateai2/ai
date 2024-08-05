@@ -1,10 +1,9 @@
 
-function feedBack(){
+function showCard(){
     
-                card3=document.getElementById("card3");
-                card3.style.display=("none");
+                
     
-    var username= document.getElementById("emailVerify").value;
+    var username= document.getElementById("username").value;
     
     var myMainLay = document.getElementById("MainLay2");
     var myInfoLay = document.getElementById("InfoLay");
