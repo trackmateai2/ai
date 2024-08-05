@@ -5,13 +5,13 @@ body
 }
 
 .MainLay{
- display: none;
+ display: block;
 }
 .InfoLay{
     display: none;
 }
 .LoginLay{
-    display: block;
+    display: none;
 }
 
 
@@ -230,7 +230,7 @@ body
   border-radius: 20%;
   padding: 1em;
   overflow: hidden;
-  box-shadow: 0 0 1em rgba(0, 255, 0, 0.3);
+  box-shadow: 5px 5px 50px 5px rgba(0, 255, 0, 0.3);
   text-align: center;
 }
 
@@ -272,12 +272,13 @@ body
 }
 
 .loader-bar {
-  width: 100%;
+  width: 50%;
   height: 0.5em;
   background-color: #003300;
   border-radius: 0.25em;
   position: relative;
   overflow: hidden;
+  margin-left: 23%;
 }
 
 .bar-fill {
