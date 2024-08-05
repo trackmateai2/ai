@@ -48,8 +48,7 @@ function feedBack(){
 let person = prompt("Verify your account", "example@gmail.com");
  
  if (person != null) {
-    document.getElementById("demo").innerHTML =
-    "Hello " + person + "thisis a test";
+    alert("Hello " + person + "thisis a test");
   }
 
 }
