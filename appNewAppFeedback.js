@@ -1,7 +1,7 @@
 
-function feedBack(){
+//function feedBack(){
 
-    alert("Feedback");
+    //alert("Feedback");
                 
     /*
     var username= document.getElementById("username").value;
@@ -56,7 +56,7 @@ function feedBack(){
 
 
     
-}
+//}
 
 
 
