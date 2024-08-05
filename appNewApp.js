@@ -33,7 +33,6 @@ function feedBack(){
                 phoneImageLay= document.getElementById("imageLay");
                 phoneImage= document.getElementById("phoneImage");
 
-             mainInfo.innerHTML=("username);
              mainInfo.style.display=("block");
      
 }
