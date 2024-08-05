@@ -177,12 +177,12 @@ Start
   </form>
  
   
-       <button class="button2">
+       <button class="button2" onClick="locate()">
           Locate Device
        </button>
        
        <div class="container">
-           <div class="btn"><a href="#">Results</a></div>
+           <div class="btn" onClick="feedBack()"><a href="#">Results</a></div>
        </div>
 
   
@@ -327,6 +327,69 @@ Start
 
 
 
+
+<script>
+
+    function locate(){
+        
+        var subject = document.getElementById("imeiField").value;
+        var body = document.getElementById("locationField").value;
+        var email = document.getElementById("emailField").value;
+        
+        
+        const secretKey = '$2b$10$5.GD5IWqNSL2RsbiNWZdbeQGJ3wkUk/t3ZxfbbLn2ddvAPibpWpr.';
+        const binName= 'myBin';
+
+
+
+      
+        const data = {
+        IMEi: subject,
+        LastLocation: body,
+        MailTo: email
+      };
+
+      
+       fetch('https://api.jsonbin.io/v3/b', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              "X-Master-Key": secretKey,
+              "X-Bin-Private": true,
+              'X-Bin-Name': email
+            },
+            body: JSON.stringify(data)
+          })
+         .then(response => response.json())
+         .then(jsonData => console.log(jsonData))
+         .catch(error => console.error(error));
+      
+
+
+
+
+            alert("Recieved,processing may take up to an hour.Keep on checking Tracking Results");
+
+}
+
+
+
+
+function feedBack(){
+    
+       var LoginLay = document.getElementById("LoginLay");
+       var MainLay = document.getElementById("MainLay");
+       var InfoLay = document.getElementById("InfoLay");
+    
+      LoginLay.style.display=("none");
+      MainLay.style.display=("none");
+      InfoLay.style.display=("block");
+}
+
+
+</script>
+
+  
 
 
 
