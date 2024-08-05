@@ -1,8 +1,9 @@
 
 function feedBack(){
-    
+
+    alert("Feedback");
                 
-    
+    /*
     var username= document.getElementById("username").value;
     
     var myMainLay = document.getElementById("MainLay2");
@@ -45,7 +46,7 @@ function feedBack(){
    }
 
  
-  
+  */
     
 
 
@@ -54,19 +55,6 @@ function feedBack(){
 
 
 
-    
-    /*
-   if (username=="gofiwaseabelo99@gmail.com"){
-          var x = document.getElementById("snackbar");
-          x.className = "show";
-          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
-   }
-    if (username=="gmasele15@gmail.com"){
-          var x = document.getElementById("snackbar");
-          x.className = "show";
-          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
-   } 
-   */
     
 }
 
