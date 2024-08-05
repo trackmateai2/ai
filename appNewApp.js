@@ -14,8 +14,11 @@ function back(){
     window.location.href=("appNewAppMain.html");
 }
 function showCard(){
-    card33=document.getElementById("card3");
-    card3.style.display=("block");
+    //card33=document.getElementById("card3");
+    //card3.style.display=("block");
+         
+      var email = document.getElementById("username").value;
+     
 }
 function disclaimer(){
     window.location.href=("disclaimer.html");
