@@ -20,11 +20,19 @@ function privacyPolicy(){
     window.location.href=("privacyPolicy.html");
 }
 function feedBack(){
-    var myMainLay = document.getElementById("MainLay2");
-    var myInfoLay = document.getElementById("InfoLay");
+    
+       var myMainLay = document.getElementById("MainLay2");
+       var myInfoLay = document.getElementById("InfoLay");
 
             myMainLay.style.display=("none");
             myInfoLay.style.display=("block");
+
+       var mainInfo = document.getElementById("mainInfo");
+       var moreInfo = document.getElementById("moreInfo");
+                phoneImageLay= document.getElementById("imageLay");
+                phoneImage= document.getElementById("phoneImage");
+
+     
      
 }
 
