@@ -19,8 +19,13 @@ function disclaimer(){
 function privacyPolicy(){
     window.location.href=("privacyPolicy.html");
 }
-function feedBackkk(){
-       
+
+
+function feedBack(){
+
+       let person = prompt("Verify your account", "example@gmail.com");
+ 
+     
        var username= document.getElementById("username").value;
        var myMainLay = document.getElementById("MainLay2");
        var myInfoLay = document.getElementById("InfoLay");
@@ -35,24 +40,13 @@ function feedBackkk(){
 
              
 
-      if (username=="gmasele15@gmail.com"){
+     if (person =="gmasele15@gmail.com") {
              mainInfo.style.display=("block");
-             alert(username);
+             alert("this is gale");
              mainInfo.innerHTML=(username);
-   }
+     }
      
 }
-
-function feedBack(){
-
-let person = prompt("Verify your account", "example@gmail.com");
- 
- if (person != null) {
-    alert("Hello " + person + " this is a test");
-  }
-
-}
-
 
 
 
