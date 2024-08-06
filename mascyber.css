@@ -1,0 +1,14 @@
+body
+{
+   background: #ffffff;
+}
+
+
+.custom-video {
+    margin-top: -1%;
+    width: 103%;
+    /*border: 0.2px solid black;*/
+    background-color:#00ee00;
+    border-radius: 20px;
+    margin-left: -1.2%;
+}
