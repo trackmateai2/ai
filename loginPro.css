@@ -125,6 +125,7 @@ input:-webkit-autofill:active {
  background: lightcoral;
  background: lightcoral;
  border: none;
+ font-family: "Rajdhani", sans-serif; 
 }
 
 .btn-1:before {
@@ -136,6 +137,11 @@ input:-webkit-autofill:active {
  box-shadow: lightcoral;
 }
 
+
+.signUp{
+    font-size: 10px;
+    font-family: "Rajdhani", sans-serif; 
+}
 
 
 
