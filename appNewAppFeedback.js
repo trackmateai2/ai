@@ -5,10 +5,12 @@ function feedBack(){
     
     var username= document.getElementById("username").value;
     
-    var myMainLay = document.getElementById("MainLay2");
+    var myLoginLay = document.getElementById("LoginLay");
+    var myMainLay = document.getElementById("MainLay");
     var myInfoLay = document.getElementById("InfoLay");
 
             myMainLay.style.display=("none");
+            myLoginLay.style.display=("none");
             myInfoLay.style.display=("block");
     
     var mainInfo = document.getElementById("mainInfo");
