@@ -46,6 +46,18 @@ function feedBack(){
    }
   
     
+ if (username=="mosimanegapekgausa@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/f/P/RjSQQa-d.jpg";
+    
+        mainInfo.innerHTML=("355866208925276 - <font color="#ff0000">Ping Failed!</font>  ");
+        moreInfo.innerHTML=(" Device May Be InActive Or Has Low GPS Connection ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
+
+  
 
 
 
