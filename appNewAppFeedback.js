@@ -36,17 +36,26 @@ function feedBack(){
    }
   
     
- if (username=="ashrafprofessor30@gmail.com"){
+ if (username=="ratiketlogetswe@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/h/D/c30ozb-d.jpg";
     
-        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 356691196956474</font><br/>  Model:  iPhone 14 (A2649)<br/>Brand: Apple<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=("Operating System	iOS 17<br/>Chipset	Apple A15 Bionic<br/>Number of CPU Cores	2<br/>RAM	6 GB<br/>Width	71.5 mm<br/>Height	146.7 mm<br/>Thickness	7.8 mm<br/>Weight	172.0 g<br/>DisplayType	RETINA<br/>Diagonal	6.1 inches<br/>Resolution	1170x2532 px<br/>Screen-to-body ratio	86.0 %<br/>Pixel density	460 ppi<br/>Colors	1073M<br/>Other display Features	, Display refresh rate: HDR10 ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 865165049716892</font><br/>  Model: Y8s (JKM-LX1)<br/>Brand: HUAWEI<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 9.0 Pie<br/>Chipset	Huawei HiSilicon KIRIN 710F<br/>Number of CPU Cores	4<br/>RAM	4 GB<br/>Width	77.1 mm<br/>Height	162.4 mm<br/>Thickness	8.135 mm<br/>Weight	180.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.5 inches<br/>Resolution	1080x2340 px<br/>Screen-to-body ratio	82.7 %<br/>Pixel density	396 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
-
+ if (username=="mojwadigaongalelwe@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/h/D/c30ozb-d.jpg";
+    
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 865165049716892</font><br/>  Model: Y8s (JKM-LX1)<br/>Brand: HUAWEI<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 9.0 Pie<br/>Chipset	Huawei HiSilicon KIRIN 710F<br/>Number of CPU Cores	4<br/>RAM	4 GB<br/>Width	77.1 mm<br/>Height	162.4 mm<br/>Thickness	8.135 mm<br/>Weight	180.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.5 inches<br/>Resolution	1080x2340 px<br/>Screen-to-body ratio	82.7 %<br/>Pixel density	396 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
   
  if (username=="gofiwaseabelo99@gmail.com"){
             phoneImageLay.style.display=("block");
