@@ -26,10 +26,10 @@ function feedBack(){
  
  if (username=="Ogaatlale@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark4.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/g/x/5CelVP-d.jpg";
     
-        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 356691757732306</font><br/>  Model: Spark 4<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
-        moreInfo.innerHTML=(" Operating System	Android 9.0 Pie<br/>Chipset	MediaTek Helio A22 (MT6761)<br/>Number of CPU Cores	4<br/>RAM	2 GB<br/>Internal Memory	32 GB<br/>Memory Card Type	microSDXC<br/>GPU Name	PowerVR GE8300<br/>Width	75.9 mm<br/>Height	165.28 mm<br/>Thickness	8.2 mm<br/>DisplayType	LCD_IPS<br/>Diagonal	6.52 inches<br/>Resolution	720x1560 px<br/>Screen-to-body ratio	82.0 %<br/>Pixel density	267 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch, ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 355151548085507</font><br/>  Model: Spark 10C <br/>Brand: TECNO<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 13<br/>Chipset	Unisoc Tiger T606<br/>Number of CPU Cores	2<br/>RAM	8 GB<br/>Internal Memory	128 GB<br/>GPU Name	ARM Mali-G57 MP1<br/>GPU Cores	1<br/> Width	75.5 mm<br/>Height	163.9 mm<br/>Thickness	8.5 mm<br/>Weight	192.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.6 inches<br/>Resolution	720x1612 px<br/>Screen-to-body ratio	84.6 %<br/>Pixel density	267 ppi<br/>Colors	16.7M<br/>Other display Features	Capacitive, Multi-touch");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
