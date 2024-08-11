@@ -73,6 +73,16 @@ if (username=="moalosi@cnl.co.bw"){
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
    }
+if (username=="neoboy71@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-go-2023.jpg";
+    
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357702654023092</font><br/>  Model: Pop 7 Pro<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Operating System	Android 12<br/>Chipset	Mediatek MT6761V Helio A22<br/>Number of CPU Cores	4<br/>RAM	3 GB<br/>Width	75.5 mm<br/>Height	163.9 mm<br/>Thickness	8.9 mm<br/>Weight	191.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.56 inches<br/>Resolution	720x1600 px<br/>Screen-to-body ratio	83.5 %<br/>Pixel density	267 ppi<br/>Colors	16M<br/>Other display Features	Capacitive, Multi-touch ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
 
     
 }
