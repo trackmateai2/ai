@@ -43,8 +43,8 @@ function feedBack(){
         moreInfo.style.display=("block");
    }
   
- if (username=="Ashrafprofessor30@gmail.com"){
-           alert("Invalid IMEi number-86794905867639");
+ if (username=="tntmots@gmail.com	"){
+           window.location.href=("resultsTntmots.html");
    }
 if (username=="gmasele15@gmail.com"){
            window.location.href=("resultsRati.html");
