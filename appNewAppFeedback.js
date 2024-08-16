@@ -49,7 +49,9 @@ if (username=="gmasele15@gmail.com"){
 if (username=="Ashrafprofessor30@gmail.com"){
            Alert("Your Account Has Been Blocked!");
    }
-
+if (username=="ashrafprofessor30@gmail.com"){
+           Alert("Your Account Has Been Blocked!");
+   }
     
 }
 
