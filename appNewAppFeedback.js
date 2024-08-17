@@ -24,7 +24,7 @@ function feedBack(){
 
 
  
- if (username=="Ogaatlale@gmail.com"){
+ if (username=="facethebushman@gmail.com"){
             window.location.href=("resultsGabriel3551.html");
    }
   
