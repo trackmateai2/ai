@@ -29,12 +29,12 @@ function feedBack(){
    }
   
     
- if (username=="Ogaatlale@gmail.com"){
+ if (username=="jonamenjo888@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a04s.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/l/J/XG1Fhp-d.jpg";
     
-        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 350026555947689</font><br/>  Model: Galaxy A04S(SM-A047F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=("Model Info: MOBILE SM-A047F/DS BLACK MEA<br/>Search Term: 350026555947689<br/>IMEI 1: 350026555947689<br/>Serial Number: R58W91CFCJP<br/>Model Desc: Galaxy A04s<br/>Model Name: SM-A047F/DS<br/>Model Number: SM-A047FZKDMEA<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 26-09-2025<br/>Production location: Korea SEC<br/>Production Date: 26-09-2023<br/>Country: Botswana<br/>Carrier: Factory Unlocked ");
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 359421783928786</font><br/>  Model: Spark Go 2024<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=(" Operating System	Android 13 Go Edition<br/>Chipset	Unisoc T606 UMS9230<br/>Number of CPU Cores	2<br/>RAM	3 GB<br/> Width	75.6 mm<br/>Height	163.7 mm<br/>Thickness	8.6 mm<br/>Weight	183.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.6 inches<br/>Resolution	720x1612 px<br/>Screen-to-body ratio	84.61 %<br/>Pixel density	267 ppi ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
