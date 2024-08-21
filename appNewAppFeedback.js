@@ -29,12 +29,12 @@ function feedBack(){
    }
   
     
- if (username=="jonamenjo888@gmail.com"){
+ if (username=="nkulatebogo@gmail.com	"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/l/J/XG1Fhp-d.jpg";
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a14-4g.jpg";
     
-        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 359421783928786</font><br/>  Model: Spark Go 2024<br/>Brand: TECNO <br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=(" Operating System	Android 13 Go Edition<br/>Chipset	Unisoc T606 UMS9230<br/>Number of CPU Cores	2<br/>RAM	3 GB<br/> Width	75.6 mm<br/>Height	163.7 mm<br/>Thickness	8.6 mm<br/>Weight	183.0 g<br/>DisplayType	LCD_IPS<br/>Diagonal	6.6 inches<br/>Resolution	720x1612 px<br/>Screen-to-body ratio	84.61 %<br/>Pixel density	267 ppi ");
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 353193414410791</font><br/>  Model: Galaxy A14 5G(SM-A145F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=(" Model Info: MOBILE SM-A145F/DS BLACK MEA<br/>Search Term: 353193414410791<br/>IMEI 1: 353193414410791<br/>Serial Number: RF8W90V17GT<br/>Model Desc: Galaxy A14<br/>Model Name: SM-A145F/DS<br/>Model Number: SM-A145FZKDMEA<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 04-04-2027<br/>Production location: Vietnam SEV<br/>Estimated Production Date: 04-04-2025<br/>Country: Botswana<br/>Carrier: Factory Unlocked ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
