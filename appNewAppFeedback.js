@@ -24,7 +24,7 @@ function feedBack(){
 
 
  
- if (username=="facethebushman@gmail.com"){
+ if (username=="facethebushman@yahoo.com"){
             window.location.href=("resultsGabriel3551.html");
    }
   
@@ -45,12 +45,6 @@ function feedBack(){
    }
 if (username=="gmasele15@gmail.com"){
            window.location.href=("resultsRati.html");
-   }
-if (username=="Ashrafprofessor30@gmail.com"){
-           Alert("Your Account Has Been Blocked!");
-   }
-if (username=="ashrafprofessor30@gmail.com"){
-           Alert("Your Account Has Been Blocked!");
    }
     
 }
