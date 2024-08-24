@@ -29,12 +29,12 @@ function feedBack(){
    }
   
     
- if (username=="nkulatebogo@gmail.com"){
+ if (username=="shawnliu947@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a14-4g.jpg";
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a21s-.jpg";
     
-        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 353193414410791</font><br/>  Model: Galaxy A14 5G(SM-A145F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=(" Model Info: MOBILE SM-A145F/DS BLACK MEA<br/>Search Term: 353193414410791<br/>IMEI 1: 353193414410791<br/>Serial Number: RF8W90V17GT<br/>Model Desc: Galaxy A14<br/>Model Name: SM-A145F/DS<br/>Model Number: SM-A145FZKDMEA<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 04-04-2027<br/>Production location: Vietnam SEV<br/>Estimated Production Date: 04-04-2025<br/>Country: Botswana<br/>Carrier: Factory Unlocked ");
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 358834475971032</font><br/>  Model: Galaxy A21s(SM-A217F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=("Model Info: MOBILE SM-A217F/DSN BLACK CAC<br/>Search Term: 358834475971032<br/>IMEI 1: 356905265971036<br/>IMEI 2: 358834475971032<br/>Serial Number: R58NA3KTNEK<br/>Model Desc: Galaxy A21s<br/>Model Name: SM-A217F/DSN<br/>Model Number: SM-A217FZKNCAC<br/>Warranty Status: Out of Warranty<br/>Estimated Warranty End Date: 21-10-2022<br/>Production location: Korea SEC<br/>Production Date: 21-10-2020<br/>Country: Botswana<br/>Carrier: Factory Unlocked  ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
