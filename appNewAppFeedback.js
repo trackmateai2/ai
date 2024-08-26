@@ -29,12 +29,12 @@ function feedBack(){
    }
   
     
- if (username=="shawnliu947@gmail.com"){
+ if (username=="flockie2002@gmail.com"){
             phoneImageLay.style.display=("block");
-            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a21s-.jpg";
+            phoneImage.src = "https://imei.net/phone-images/t/gsm-cache/x/9/Eq3lPN-d.jpg";
     
-        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 358834475971032</font><br/>  Model: Galaxy A21s(SM-A217F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
-        moreInfo.innerHTML=("Model Info: MOBILE SM-A217F/DSN BLACK CAC<br/>Search Term: 358834475971032<br/>IMEI 1: 356905265971036<br/>IMEI 2: 358834475971032<br/>Serial Number: R58NA3KTNEK<br/>Model Desc: Galaxy A21s<br/>Model Name: SM-A217F/DSN<br/>Model Number: SM-A217FZKNCAC<br/>Warranty Status: Out of Warranty<br/>Estimated Warranty End Date: 21-10-2022<br/>Production location: Korea SEC<br/>Production Date: 21-10-2020<br/>Country: Botswana<br/>Carrier: Factory Unlocked  ");
+        mainInfo.innerHTML=(" STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 357492755696661</font><br/>  Model: Galaxy A05 (SM-A055F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana ");
+        moreInfo.innerHTML=(" Model Info: MOBILE SM-A055F/DS BLACK AFC<br/>Search Term: 357492755696661<br/>IMEI 1: 357492755696661<br/>Serial Number: R92X20V6XBZ<br/>Model Desc: Galaxy A05<br/>Model Name: SM-A055F/DS<br/>Model Number: SM-A055FZKDAFC<br/>Warranty Status: Warranty Active<br/>Estimated Warranty End Date: 01-03-2026<br/>Production location: Korea SEC<br/>Production Date: 29-02-2024 ");
         
         mainInfo.style.display=("block");
         moreInfo.style.display=("block");
