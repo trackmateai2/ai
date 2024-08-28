@@ -22,6 +22,16 @@ function feedBack(){
       
    
 
+ if (username=="rogermphafe@gmail.com"){
+            phoneImageLay.style.display=("block");
+            phoneImage.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a13.jpg";
+    
+        mainInfo.innerHTML=("STATUS: <font color=#00ee00>Found</font><br/>IMEI: <font color=#00ee00> 351073568491486</font><br/>  Model: Galaxy A13 5G(SM-A137F)<br/>Brand: Samsung<br/>DeviceType:  Smartphone<br/>  Location: <font color=#ff0000>  Hidden(Payment Required)</font><br/>  Country Code: BW<br/>  Country Name: Botswana  ");
+        moreInfo.innerHTML=("  ");
+        
+        mainInfo.style.display=("block");
+        moreInfo.style.display=("block");
+   }
 
  
  if (username=="facethebushman@yahoo.com"){
@@ -33,13 +43,7 @@ function feedBack(){
           window.location.href=("resultsFlockie35749.html");
    }
   
- if (username=="tntmots@gmail.com"){
-           window.location.href=("resultsTntmots.html");
-   }
-if (username=="Ogaatlale@gmail.com"){
-           window.location.href=("resultsGabriel35388.html");
-   }
-    
+
 }
 
 
