@@ -25,7 +25,11 @@ if (username=="72643745@temp.com"){
      window.location.href=("results72643745.html");
 
 }
-           
+      
+if (username=="kereeditselaone@gmail.com"){
+     window.location.href=("resultsJohnson.html");
+
+}
 
 
 
