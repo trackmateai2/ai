@@ -21,6 +21,14 @@ function feedBack(){
                 phoneImage= document.getElementById("phoneImage")
       
    
+if (username=="maitumelolesang@gmail.com"){
+     window.location.href=("resultslMaitumelo.html");
+
+}
+
+
+
+
 if (username=="72643745@temp.com"){
      window.location.href=("results72643745.html");
 
